@@ -1,3 +1,2 @@
-## python programing
-# python hello world
+# python programming
 
