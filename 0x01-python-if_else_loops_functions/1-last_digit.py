@@ -15,6 +15,6 @@ if lastValue() > 5:
 elif lastValue() > 6 and lastValue() != 0:
     print("less than 6 and not 0")
 elif lastValue() == 0:
-    print("and is 0")
+    print("0")
 elif lastValue() < 0 and lastValue() != 0:
-    print("less than 6 and 0")
+    print("less than 6 and not 0")
