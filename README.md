@@ -1,2 +1,1 @@
-# python programming
-
+python if, else statement and functions
