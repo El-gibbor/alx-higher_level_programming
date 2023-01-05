@@ -1,0 +1,3 @@
+#!/bin/bash
+import py_compile
+compile.compile('$PYFILE', '$PYFILE' + 'c')
