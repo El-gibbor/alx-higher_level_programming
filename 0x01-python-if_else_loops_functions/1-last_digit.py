@@ -2,8 +2,8 @@
 import random
 number = random.randint(-10000, 10000)
 def lastValue():
-    int_str = str(number) #convert number to string using str function
-    lastValue = int(int_str[-1]) #get the last char of the str using slice notation
+    int_str = str(number) #convert number to string using string function
+    lastValue = int(int_str[-1]) #get the last character of the string using slice notation
     return -lastValue if (number < 0) else lastValue
 
 print(f"Last digit of {number:d} is {lastValue():d} and is", end=' ')
