@@ -5,4 +5,3 @@ for i in range(100):
     print("{}".format(i), end='')
     if i != 99:
         print(", ", end='')
-
