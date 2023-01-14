@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 if __name__ == "__main__":
     import sys
-    from calculator_1 import*
+    from calculator_1 import *
 
 while len(sys.argv) < 4:
     print("usage: ./100-my_calculator.py <a> <operator> <b>")
