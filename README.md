@@ -4,4 +4,4 @@
 |:----------------------|:---------------|  
 |0x00. Python - Hello, World.|Introduction to python, String formatters in python3, compilation and using python interpreter, pycodesyle.|
 |0x01. Python - if/else, loops, functions.|Control flow tools, looping, writing of python functions.
-|0x02. Python - import & modules.|Modules (Creation, importation and uses of imported functions and modules), command line arguments
+|0x02. Python - import & modules.|Modules (Creation, importation and uses of imported functions and modules), command line arguments.|
