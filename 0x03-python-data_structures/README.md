@@ -1,5 +1,5 @@
 # 0x03. Python - Data Structures: Lists, Tuples  
-### All solutions (codes) in the below files are solutions that I algorithmically came up with, hence we Software engineering students at Alx-Holberton are mandated and not allowed to use most of the standard built-in functions, import modules or use most of the python methods and exceptions. we do it the hard but profitable way!
+### All solutions (codes) in the below files are solutions that I algorithmically came up with. hence, we Software engineering students at Alx-Holberton are mandated and not allowed to use most of the standard built-in functions, import modules or use most of the python methods and exceptions. we do it the hard but profitable way!
 |Task files|Details|
 |:---------|:------|
 |0-print_list_integer.py|function that prints all integers of a list using str.format|
