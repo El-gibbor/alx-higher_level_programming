@@ -6,6 +6,6 @@ def safe_print_division(a, b):
     except ZeroDivisionError:
         division = None
     finally:
-        # finally outputs all (error value -> None & the divisible values
+        # finally outputs all (error assigned value -> (None) & the divisible values
         print("Inside result: {}".format(division))
     return (division)
