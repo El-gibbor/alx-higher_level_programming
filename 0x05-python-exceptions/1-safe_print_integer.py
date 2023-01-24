@@ -5,5 +5,5 @@ def safe_print_integer(value):
         print()
         return True
         """handles the error of str type parsed to int format"""
-    except ValueError:
+    except (ValueError, TypeError)
         return False
