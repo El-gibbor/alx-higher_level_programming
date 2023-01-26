@@ -8,8 +8,7 @@ class Square:
     def __init__(self, size):
         """defining the constructor method which initialises the class
         Args:
-            self - instance of our class (self representing all)
-            size -  class attribute
+            size -  class attribute, representing size of square
         """
 
         self.__size = "size"
