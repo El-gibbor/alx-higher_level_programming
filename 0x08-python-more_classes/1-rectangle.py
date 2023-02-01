@@ -25,7 +25,7 @@ class Rectangle:
         self.__value = value
 
     @property
-    def height(self):
+    def height(self, VALUE):
         """reetrieves the private attribute value"""
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
