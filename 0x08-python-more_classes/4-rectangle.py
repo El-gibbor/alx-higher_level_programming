@@ -1,17 +1,14 @@
-#!usr/bin/python3
+!usr/bin/python3
 """a class, rectangle"""
 
 
 class Rectangle:
-   """ defines a class with 2 private attributes
+    """
+    a rectangle with to attributes
 
     Args:
-        width(int): width of the rectangle
-        heigth(int): lenghth of the rectangle
-
-    raises:
-        TypeError: if height or width is not an integer
-        ValueError: if height or width is < 0
+        withds(int): width of rectangle
+        height(int): height of rectangle
     """
     def __init__(self, width=0, height=0):
         """initializing the class with two private instance attr."""
