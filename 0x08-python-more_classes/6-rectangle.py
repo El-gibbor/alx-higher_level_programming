@@ -45,21 +45,21 @@ class Rectangle:
         elif value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
-        
+
     def area(self):
         """returns rectangle area"""
         return self.__width * self.__height
-    
+
     def perimeter(self):
         """returns the rectangle patimeter"""
         return (2 * self.__height + self.width)
-    
+
     def __str__(self) -> str:
         """defines string representation of Rectangle"""
         if self.__width == 0 or self.__height == 0:
             return ""
         return '\n'.join('#' * self.__width for j in range(self.__height))
-        
+
     def __repr__(self):
         """returns the representation of a class method that can
         be parsed to create a new instance
@@ -68,7 +68,7 @@ class Rectangle:
 
     def __init__(self, width=0, height=0):
         type(self).number_of_instances += 1
-        
+
     def __del__(self, width=0, height=0):
         """destructor, called when all refrences of obj are deleted"""
         print("Bye rectangle...")
