@@ -1,4 +1,4 @@
-!usr/bin/python3
+#!usr/bin/python3
 """a class, rectangle"""
 
 
@@ -57,8 +57,8 @@ class Rectangle:
             return ""
         else:
             str_return = ""
-            for i in range(self.__width):
-                for j in range(self.__height):
+            for i in range(self.__height):
+                for j in range(self.__width):
                     str_return += "#"
                 str_return += "\n"
             return (str_return[:-1])
