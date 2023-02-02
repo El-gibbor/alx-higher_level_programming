@@ -13,7 +13,7 @@ class Rectangle:
         TypeError: if height or width is not an integer
         VAlueError: if the value of heigth or width is < 0
         """
-    def  __init__(self, width=0, height=0):
+    def __init__(self, width=0, height=0):
         """initialising the instance attribuutes"""
         self.width = width
         self.height = height
@@ -39,12 +39,12 @@ class Rectangle:
 
     @height.setter
     def height(self, value):
-         """checks, validate and set the width attribute"""
-         if not isinstance(value, int):
-             raise TypeError("height must be an integer")
-         elif value < 0:
-             raise ValueError("height must be >= 0")
-         self.__height = value
+        """checks, validate and set the width attribute"""
+        if not isinstance(value, int):
+            raise TypeError("height must be an integer")
+        elif value < 0:
+            raise ValueError("height must be >= 0")
+        self.__height = value
 
     def area(self):
         """returns the area of rectangle"""
@@ -58,11 +58,13 @@ class Rectangle:
             return (2 * (self.__height + self.__width))
 
     def __str__(self):
+        """string representation to print a rectangle of # character"""
         if self.__width == 0 or self.__height == 0:
             return ""
         else:
+            return_str = ""
             for i in range(self.__height):
                 for j in range(self.__width):
-                    print("#", end="")
-                print()
-            return
+                    return_str += "#"
+                return_str += "\n"
+            return (return_str)
