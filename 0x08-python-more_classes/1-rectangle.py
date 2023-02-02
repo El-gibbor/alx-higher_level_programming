@@ -10,14 +10,14 @@ class Rectangle:
 
         Args:
             width (int): width of the rectangle. Defaults to 0.
-            height (in): height of the Defaults to 0.
+            height (int): height of the Defaults to 0.
 
         raises:
             TypeError: if width and height are not integers
             ValueError: if width and height are < 0
         """
-        self.width = width
-        self.height = height
+        self.__width = width
+        self.__height = height
 
     @property
     def width(self):
