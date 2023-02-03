@@ -62,6 +62,7 @@ class SinglyLinkedList:
             self.__head = new_node
         else:
             current_n = self.__head
-            while current_n.next_node.data and new_node.data > current_n.next_node:
+            while current_n.next_node and new_node.data > current_n.next_node.data:
                 current_n = current_n.next_node
-                current_n.next = new_node
+                new_node.next = current_n.next_node
+                current_n.next_node = new_node
