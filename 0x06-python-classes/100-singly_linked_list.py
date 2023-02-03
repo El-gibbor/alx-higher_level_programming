@@ -20,6 +20,7 @@ class Node:
         """check, validate and set the value for data"""
         if not isinstance(value, int):
             raise TypeError("data must be an integer")
+        self.__data = value
 
     @property
     def next_node(self):
