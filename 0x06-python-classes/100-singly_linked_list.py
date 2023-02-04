@@ -1,69 +1,82 @@
 #!/usr/bin/python3
-"""a class, Node"""
+"""a class module"""
 
 
 class Node:
-    """defines a Node"""
-
+    """defining the node"""
+    
     def __init__(self, data, next_node=None):
-        """initialize instance attributes, propereties of the list"""
+        """initialising object attributes
+
+        Args:
+            data (int): value/content of each node
+            next_node (Node): next node in the l-list. Defaults to None.
+        """
         self.data = data
         self.next_node = next_node
-
+        
     @property
     def data(self):
-        """retrieve/return data for each node"""
+        """retrieve/return the data attribute"""
         return self.__data
-
+    
     @data.setter
     def data(self, value):
-        """check, validate and set the value for data"""
+        """check, validate and set the value for data
+
+        Args:
+            value (int): value/content of each node
+        """
         if not isinstance(value, int):
             raise TypeError("data must be an integer")
         self.__data = value
-
+        
     @property
     def next_node(self):
-        """retreive/return the value of Next_node"""
+        """retrieve/return next node attribute"""
         return self.__next_node
-
+    
     @next_node.setter
     def next_node(self, value):
-        """check, validate and set the value of next node"""
+        """check, validate and set next node attribute
+
+        Args:
+            value (int): next node in the l-list
+        """
         if not isinstance(value, Node) and value is not None:
             raise TypeError("next_node must be a Node object")
         self.__next_node = value
 
 class SinglyLinkedList:
-
+    """defines a singly linked list"""
+    
     def __init__(self):
-        """creating structure of the linked list"""
+        """initialise an empty singly linked list"""
         self.__head = None
-
+        
     def __str__(self):
-        """display the contents of linkedl list"""
-        node_ = ""
-        # asign an iterator to head and treverse the entire l-list
-        n = self.__head
-        while n:
-            # print & seperate each data of node with a newline
-            node_ += str(n.data) + "\n"
-            n = n.next_node
-        return (node_[:-1])
+        """human-readble reprensation of the singly l-list"""
+        node = ""
+        l_node = self.__head # assign an iterator to head to loop through the l-list
+        while l_node:
+            # each node data seperated by newline asper alx demand
+            node += str(l_node.data) + "\n"
+            l_node = l_node.next_node
+        return node[:-1] # ([:-1]) -> exempts a "\n" at the end
+    
+        """using list comprehension (optional)"""
+    # def __str__(self):
+    #       return '\n'.join(str(n.data) for n in self)
     
     def sorted_insert(self, value):
-        """inserts a new node into the correct increasing sorted order"""
-        new_node = Node(value) # initialise the node with data/value
-        if self.__head is None:
-            self.__head = new_node
-            return
-        # insert node at begining if the data is smaller than data where head points to
-        elif self.__head.data >= new_node.data:
+        """inserts Nodes in a sorted manner (increasing order)"""
+        new_node = Node(value)
+        node = self.__head
+        if node is None or node.data >= new_node.data:
             new_node.next_node = self.__head
             self.__head = new_node
-        else:
-            current_n = self.__head
-            while current_n.next_node and new_node.data > current_n.next_node.data:
-                current_n = current_n.next_node
-                new_node.next = current_n.next_node
-                current_n.next_node = new_node
+            return
+        while node.next_node is not None and node.next_node.data < new_node.data:
+            node = node.next_node
+        new_node.next_node = node.next_node
+        node.next_node = new_node
