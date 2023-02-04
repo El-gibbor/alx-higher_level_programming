@@ -64,7 +64,7 @@ class SinglyLinkedList:
             # each node data seperated by newline asper alx demand
             node += str(l_node.data) + "\n"
             l_node = l_node.next_node
-            return node[:-1]  # ([:-1]) -> exempts a "\n" at the end
+        return node[:-1]  # ([:-1]) -> exempts a "\n" at the end
 
     def sorted_insert(self, value):
         """inserts Nodes in a sorted manner (increasing order)"""
