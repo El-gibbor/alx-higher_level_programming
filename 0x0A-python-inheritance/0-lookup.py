@@ -6,5 +6,5 @@ and methods of an object
 
 def lookup(obj):
     """yields all attributes in the parsed obj"""
-    
+
     return dir(obj)
