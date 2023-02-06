@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-""" a function that returns the list of available attributes
-and methods of an object
-"""
+"""a class MyList that inherits from list"""
 
 
 class MyList(list):
@@ -9,4 +7,5 @@ class MyList(list):
     
     def print_sorted(self):
         """prints list in sorted order"""
+        
         print(sorted(self))
