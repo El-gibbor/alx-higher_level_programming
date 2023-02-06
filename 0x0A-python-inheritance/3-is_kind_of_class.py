@@ -7,4 +7,4 @@ instance of a class that inherited 4rm, the specified class.
 def is_kind_of_class(obj, a_class):
     """checks if the above func documentaion corresponds/exist"""
 
-    return isinstance(0bj, a_class)
+    return isinstance(obj, a_class)
