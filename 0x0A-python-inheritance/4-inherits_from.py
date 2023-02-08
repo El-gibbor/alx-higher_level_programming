@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-"""this function should return True if obj is an instance of the class "a_class" or if obj
-    is an instance of a class that inherited from a_class, otherwise it should return False.
+"""True if obj is an instance of the class "a_class" or if obj is an instance
+    of a class that inherited from a_class, otherwise it should return False.
 """
 
 
