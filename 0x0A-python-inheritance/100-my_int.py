@@ -3,13 +3,13 @@
 
 
 class MyInt(int):
-    """ a rebel class that returns the negation of the given operators.
-        == and != operators are defined to return and inverted behaviour
+    """ a rebel class that returns the negation a given comparison operator.
+        == and != operators are defined to return an inverted behaviour
     """
     def __eq__(self, other):
-        """inverts == operator to the opposite of what it does"""
+        """== operator is inverted to the opposite of what it does"""
         return not super().__eq__(other)
 
     def __ne__(self, other):
-        """inverts != operator to the opposite of what it does"""
+        """!= operator is inverted to the opposite of what it does"""
         return not super().__ne__(other)
