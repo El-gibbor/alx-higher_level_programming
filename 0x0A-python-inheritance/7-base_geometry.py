@@ -1,4 +1,4 @@
-#!/usr/bin/pyhon3i
+#!/usr/bin/pyhon3
 """a class module, BaseGeometry"""
 
 
@@ -8,7 +8,7 @@ class BaseGeometry:
     def area(self):
         """raises an error if area is checked"""
 
-        raise Exception("area is not implemented")
+        raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
         """Validate a parameter as an integer.

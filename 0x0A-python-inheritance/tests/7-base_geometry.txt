@@ -1,0 +1,80 @@
+file to test cases for integer validator module
+
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+case1:
+test if value is an int
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("boy", 12)
+
+case2:
+test if value is less than 0
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("height", -3)
+Traceback (most recent call last):
+    ...
+ValueError: height must be greater than 0
+
+case 3:
+test if value is a string
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("distance", "sam")
+Traceback (most recent call last):
+    ...
+TypeError: distance must be an integer
+
+case4:
+test if no argument is passed
+>>> bg = BaseGeometry()
+>>> bg.integer_validator()
+Traceback (most recent call last):
+    ...
+TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+case 5:
+Test if one argument is passed
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("price")
+Traceback (most recent call last):
+    ...
+TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+case 6
+test if value is a float
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("size", 9.65)
+Traceback (most recent call last):
+    ...
+TypeError: size must be an integer
+
+case 7
+test if value is a dictionary
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("size", {4, 5})
+Traceback (most recent call last):
+    ...
+TypeError: size must be an integer
+
+case 8:
+test if value is a list
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("distance", [5])
+Traceback (most recent call last):
+    ...
+TypeError: distance must be an integer
+
+case 9:
+Test if value is a tuple
+>>> bg = BaseGeometry
+>>> bg.integer_validator("age",(4,))
+Traceback (most recent call last):
+    ...
+TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+case 10:
+test if value is a None
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("scope", None)
+Traceback (most recent call last):
+    ...
+TypeError: scope must be an integer
