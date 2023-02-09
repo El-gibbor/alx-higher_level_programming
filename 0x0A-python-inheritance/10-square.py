@@ -7,13 +7,13 @@ class Square(Rectangle):
     """defines subclass that inherit from Rectangle"""
 
     def __init__(self, size):
-         """using a method from the super class, integer_validator(),
-         to validate subclass initialised attributes
-         """
+        """using a method from the super class, integer_validator(),
+        to validate subclass initialised attributes
+        """
 
-         self.integer_validator("size", size)
-         self.__size = size
-         super().__init__(size, size)
+        self.integer_validator("size", size)
+        self.__size = size
+        super().__init__(size, size)
 
     def area(self):
         """returns the area of square"""
