@@ -3,7 +3,8 @@
 
 
 class MyInt(int):
-    """ module of a rebel class that returns the negation a given comparison operator.
+    """ module of a rebel class that returns the negation a given comparison
+        operator.
         == and != operators are defined to return an inverted behaviour
     """
     def __eq__(self, other):
