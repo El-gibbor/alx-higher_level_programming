@@ -7,7 +7,9 @@ class Rectangle(BaseGeometry):
     """defines subclass which inherites from BaseGeometry"""
 
     def __init__(self, width, height):
-        """using integer_validator() to validate initialised attributes"""
+        """using a method from the super class, integer_validator(),
+           to validate subclass initialised attributes
+        """
 
         self.integer_validator("height", height)
         self.__height = height
