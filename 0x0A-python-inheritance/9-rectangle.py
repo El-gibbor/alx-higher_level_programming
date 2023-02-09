@@ -10,9 +10,9 @@ class Rectangle(BaseGeometry):
         """using a method from the super class, integer_validator(),
            to validate subclass initialised attributes
         """
-        self.integer_validator(height, height)
+        self.integer_validator("width", width)
         self.__height = height
-        self.integer_validator(height, height)
+        self.integer_validator("height", height)
         self.__width = width
 
     def area(self):
