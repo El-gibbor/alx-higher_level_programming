@@ -3,7 +3,7 @@
 
 
 class MyInt(int):
-    """ module of a rebel class that returns the negation a given comparison
+    """ module of a rebel class that returns the negation of a given comparison
         operator.
         == and != operators are defined to return an inverted behaviour
     """
