@@ -3,7 +3,7 @@
 
 
 def add_attribute(object, attribute, value):
-    """_summary_
+    """adds a new attribute to an object if it’s possible
 
     Args:
         object (class): object where the new attribute is added
