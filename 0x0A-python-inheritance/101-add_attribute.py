@@ -13,7 +13,7 @@ def add_attribute(object, attribute, value):
     Raises:
         TypeError: if the object's __dic__ attr doesn't have a writable attr
     """
-    if isinstance(object, "MyClass"):
+    if hasattr(object, "__dict__"):
         setattr(object, attribute, value)
     else:
         raise TypeError("can't add new attribute")
