@@ -1,0 +1,69 @@
+The ``0-add_integer`` module
+=====================================
+
+Using  ``add_integer``
+-----------------------
+
+This module performs an addition operation on two given integers
+
+function importation from module
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+Now, the test cases
+====================
+
+validating docstrings module (completeness and readability standards):
+
+    >>> docs = __import__("0-add_integer").__doc__
+    >>> len(docs) > 1
+    True
+
+    >>> func_doc =  __import__("0-add_integer").add_integer.__doc__
+    >>> len(func_doc) > 1
+    True
+
+validating accurate return values of the function:
+    >>> add_integer(1, 2)
+    3
+
+With negative operand:
+    >>> add_integer(100, -2)
+    98
+
+With float type and negative operand:
+    >>> add_integer(10.7, -2)
+    8
+    >>> add_integer(0, 0)
+    0
+
+validating with only optional argument (func has arg with default value, b=98):
+    >>> add_integer(2)
+    100
+
+Handling input of large operands and returning the accurate result:
+    >>> add_integer(4499900000000000000000, 999999999999999999999)
+    5499899999999999999999
+
+Fail cases
+----------------
+validating unsupported data types (first operand):
+    >>> add_integer(10, "string")
+    Traceback (most recent call last):
+    ...
+    TypeError: b must be an integer
+
+Validating the absence of arg value (using special constant)
+    >>> add_integer(None)
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+
+validating missing/empty argument:
+    >>> add_integer()
+    Traceback (most recent call last):
+    ...
+    TypeError: add_integer() missing 1 required positional argument: 'a'
+
+
+
+
