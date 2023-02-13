@@ -1,5 +1,9 @@
 #!/usr/bin/python3
-"""a module for addition"""
+"""a module for addition
+
+Returns:
+    (int): the sum of paremeter a and b
+"""
 
 
 def add_integer(a, b=98):
@@ -11,9 +15,6 @@ def add_integer(a, b=98):
 
     Raises:
         TypeError: if a and b are either not int or float
-
-    Returns:
-        (int): the sum of paremeter a and b
     """
     if not isinstance(a, (int, float)):
         raise TypeError("a must be an integer")
