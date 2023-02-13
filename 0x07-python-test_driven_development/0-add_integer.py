@@ -11,7 +11,7 @@ def add_integer(a, b=98):
 
     Raises:
         TypeError: if a and b are either not int or float
-        
+
     Returns:
         (int): the sum of paremeter a and b
     """
