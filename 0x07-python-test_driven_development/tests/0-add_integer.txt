@@ -63,7 +63,3 @@ validating missing/empty argument:
     Traceback (most recent call last):
     ...
     TypeError: add_integer() missing 1 required positional argument: 'a'
-
-
-
-
