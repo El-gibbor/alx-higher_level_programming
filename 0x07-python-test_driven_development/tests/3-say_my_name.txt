@@ -43,6 +43,6 @@ validating arguments type(s) (checking if any of the args are not strings):
     Traceback (most recent call last):
     TypeError: first_name must be a string
 
-    >>> say_my_name("Agoziem", ["wale", 101, "Lakers",])
+    >>> say_my_name("Agoziem", ["wale", 101, "Lakers"])
     Traceback (most recent call last):
     TypeError: last_name must be a string
