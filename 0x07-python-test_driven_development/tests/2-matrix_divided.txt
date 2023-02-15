@@ -1,0 +1,58 @@
+The ``2-matrix_divided`` module
+================================
+
+Using ``matrix_divided``
+--------------------------------
+
+This module performs a division operation on all the elements of a matrix
+
+function importation from module
+    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+The Test cases:
+--------------------------------------------
+When elements are not evenly devisible (returns float, rounded up to 2 decimals):
+    >>> matrix = [
+    ...    [3, 2, 1],
+    ...    [6, 5, 4]
+    ... ]
+    >>> print(matrix_divided(matrix, 5))
+    [[0.6, 0.4, 0.2], [1.2, 1.0, 0.8]]
+
+Failed cases
+---------------------------------------------
+trying list with elements that are not either int or float:
+    >>> matrix = [
+    ...    [3, "2", 1],
+    ...    ["6", 5, 4]
+    ... ]
+    >>> print(matrix_divided(matrix, 5))
+    Traceback (most recent call last):
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+trying list of lists with diferent row sizes:
+    >>> matrix = [
+    ...    [3, 2, 1],
+    ...    [6, 9, 15, 5, 4]
+    ... ]
+    >>> print(matrix_divided(matrix, 5))
+    Traceback (most recent call last):
+    TypeError: Each row of the matrix must have the same size
+
+checking for unsupported opperand (divisor must be int or float. else, TypeError)
+    >>> matrix = [
+    ...    [3, 2, 1],
+    ...    [6, 9, 2]
+    ... ]
+    >>> print(matrix_divided(matrix, "5"))
+    Traceback (most recent call last)
+    TypeError: div must be a number
+
+validating the value of devisor (can't be equal to zero (0)):
+    >>> matrix = [
+    ...    [3, 2, 1],
+    ...    [6, 9, 2]
+    ... ]
+    >>> print(matrix_divided(matrix, 0))
+    Traceback (most recent call last)
+    ZeroDivisionError: division by zero
