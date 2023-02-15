@@ -12,7 +12,7 @@ Function importation for module
 The test cases:
 ---------------
 
-validating furnction arguments with only default optional argument provided:
+validating just one arg (works. optional argument with default value is provided):
     >>> say_my_name("Elgibbor")
     My name is Elgibbor 
 
@@ -30,7 +30,7 @@ Validating Excess positional arguments (morethan 2):
     Traceback (most recent call last):
     TypeError: say_my_name() takes from 1 to 2 positional arguments but 3 were given
 
-validating the type of arguments (checking if args are not strings):
+validating arguments type(s) (checking if any of the args are not strings):
     >>> say_my_name(109, "Elgibbor")
     Traceback (most recent call last):
     TypeError: first_name must be a string
@@ -38,3 +38,11 @@ validating the type of arguments (checking if args are not strings):
     >>> say_my_name(None)
     Traceback (most recent call last):
     TypeError: first_name must be a string
+
+    >>> say_my_name({"LeBron": 6, "James": 23}, "Eke")
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+
+    >>> say_my_name("Agoziem", ["wale", 101, "Lakers",])
+    Traceback (most recent call last):
+    TypeError: last_name must be a string
