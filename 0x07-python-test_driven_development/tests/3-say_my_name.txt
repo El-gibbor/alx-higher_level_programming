@@ -21,6 +21,10 @@ validating empty paremeter (parsing in no arguments):
     Traceback (most recent call last):
     TypeError: say_my_name() missing 1 required positional argument: 'first_name'
 
+empty string as argument (works. optional arg with default value is provided)
+    >>> say_my_name("")
+    My name is  
+
 Validating Excess positional arguments (morethan 2):
     >>> say_my_name("Elgibbor", "Debby", "wale")
     Traceback (most recent call last):
