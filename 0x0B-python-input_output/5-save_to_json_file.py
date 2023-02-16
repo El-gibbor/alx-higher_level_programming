@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """Deserializes a JSON file object into a standard python object."""
-import json
+from json import dump
 
 
 def save_to_json_file(my_obj, filename):
@@ -11,4 +11,4 @@ def save_to_json_file(my_obj, filename):
         filename (_type_): where the JSON object will be stored
     """
     with open(filename, "w",) as file:
-        json.dump(my_obj, file)
+        dump(my_obj, file)
