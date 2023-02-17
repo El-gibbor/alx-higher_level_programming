@@ -37,8 +37,8 @@ class Student:
                 if hasattr(self, values):
                     result[values] = getattr(self, values)
             return result
-
+    
     def reload_from_json(self, json):
-        for keyz, valz in json.item():
+        for keyz, valz in json.items():
             if hasattr(self, keyz):
                 setattr(self, keyz, valz)
