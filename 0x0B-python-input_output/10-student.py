@@ -18,7 +18,7 @@ class Student:
             
         Note: 
         The try and except block below might be redundant in this context,
-        and its not a mandated requirement from alx. i just added it to handle
+        and its not a mandated requirement from alx. I just added it to handle
         the raised TypeError which is used to cover all edge cases.
         """
         try:
