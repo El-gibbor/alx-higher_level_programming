@@ -11,10 +11,15 @@ class Student:
         self.age = age
 
     def to_json(self, attrs=None):
-        """retrieves a dictionary representation of the class instance
+        """retrieves a dictionary representation of the class instance.
 
         Args:
             attrs (list(str)): attributes to be returned. Defaults to None.
+            
+        Note: 
+        The try and except block below might be redundant in this context,
+        and its not a mandated requirement from alx. i just added it to handle
+        the raised TypeError which is used to cover all edge cases.
         """
         try:
             if attrs is not None and not isinstance(attrs, list):
