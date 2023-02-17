@@ -12,6 +12,7 @@ class Student:
 
     def to_json(self, attrs=None):
         """retrieves a dictionary representation of the class instance.
+        only key-value pair of class instance attr name in this list will be retrieved
 
         Args:
             attrs (list(str)): attributes to be returned. Defaults to None.
