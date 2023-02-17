@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-"""a module to serialize the class instance attributes,
-desierialize and retrieve key-value pairs of matched attribute names
-"""
+"""a module to serialize the class instance attributes """
 
 
 class Student:
@@ -14,12 +12,12 @@ class Student:
 
     def to_json(self, attrs=None):
         """retrieves a dictionary representation of the class instance.
-        only key-value pair of class attr name in this list will be retrieved
+        only key-value pair of class instance attr name in this list will be retrieved
 
         Args:
             attrs (list(str)): attributes to be returned. Defaults to None.
-
-        Note:
+            
+        Note: 
         The try and except block below might be redundant in this context,
         and its not a mandated requirement from alx. I just added it to handle
         the raised TypeError which is used to cover all edge cases.
@@ -37,8 +35,10 @@ class Student:
                 if hasattr(self, values):
                     result[values] = getattr(self, values)
             return result
-
+    
     def reload_from_json(self, json):
         for keyz, valz in json.item():
-            if hasattr(self, keyz):
+            # if hasattr(self, keyz):
                 setattr(self, keyz, valz)
+                
+        
