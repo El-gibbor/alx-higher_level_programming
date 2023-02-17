@@ -22,10 +22,8 @@ class Student:
         except TypeError:
             pass
         if attrs is None:
-            # Return all class attributes as a dictionary
             return vars(self)
         elif all(isinstance(values, str) for values in attrs):
-            # Return only the attributes in the attrs list
             result = {}
             for values in attrs:
                 if hasattr(self, values):
