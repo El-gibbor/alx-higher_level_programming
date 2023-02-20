@@ -5,4 +5,4 @@ or representation of a parsed in instance of a class(obj)
 
 
 def class_to_json(obj):
-    return vars(obj)
+    return obj.__dict__
