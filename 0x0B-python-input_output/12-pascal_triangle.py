@@ -10,5 +10,4 @@ def pascal_triangle(n):
             row.append(C)
             C = C * (i - j) // (j + 1)
         result.append(row)
-    for r in result:
-        print(r)
+    return result  
