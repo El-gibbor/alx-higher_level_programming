@@ -93,7 +93,7 @@ class Rectangle(Base):
         return self.__height * self.__width
 
     def display(self):
-        """Displays the rectangle using # """
+        """prints the rctangle shae with # """
         for y in range(self.y):
             print("")
         for row in range(self.__height):
@@ -106,3 +106,14 @@ class Rectangle(Base):
     def __str__(self) -> str:
         return "[Rectangle] ({}) {}/{} - {}/{}"\
             .format(self.id, self.__x, self.__y, self.__width, self.__height)
+
+    def display(self):
+        """# triangle character taking x and y corndinates  # """
+        for y in range(self.y):
+            print("")
+        for row in range(self.__height):
+            for x in range(self.x):
+                print(" ", end="")
+            for column in range(self.__width):
+                print("#", end="")
+            print()
