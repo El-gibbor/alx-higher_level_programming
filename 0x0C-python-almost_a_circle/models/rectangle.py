@@ -31,7 +31,7 @@ class Rectangle(Base):
         self.x = x
         self.y = y
         super().__init__(id)
-        
+
     @property
     def width(self):
         """retrieves the private attr of width"""
@@ -86,8 +86,8 @@ class Rectangle(Base):
             raise TypeError("y must be an integer")
         elif value < 0:
             raise ValueError("y must be >= 0")
-        self.__y = value   
-        
+        self.__y = value
+
     def area(self):
         """returns the area of rectangle"""
         return self.__height * self.__width
