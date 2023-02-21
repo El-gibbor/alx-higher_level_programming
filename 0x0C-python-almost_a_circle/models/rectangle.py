@@ -91,3 +91,14 @@ class Rectangle(Base):
     def area(self):
         """returns the area of rectangle"""
         return self.__height * self.__width
+    
+    def display(self):
+        """Displays the rectangle using # """
+        for y in range(self.y):
+            print("")
+        for row in range(self.__height):
+            for x in range(self.x):
+                print(" ", end="")
+            for column in range(self.__width):
+                print("#", end="")
+            print()
