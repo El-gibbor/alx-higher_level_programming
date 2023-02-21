@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""a module for the Base of all other classes in this project"""
+"""a module for the class Base of all other classes in this project"""
 
 
 class Base:

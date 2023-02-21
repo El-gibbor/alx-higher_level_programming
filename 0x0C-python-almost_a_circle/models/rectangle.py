@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""a module that contains a sub class from class, Base"""
+"""a module that contains a sub class from class, Base """
 
 from models.base import Base
 
@@ -26,12 +26,12 @@ class Rectangle(Base):
         """call super class so that the base class __init__ logic
         can be used. this is also the id of the class
         """
-        super().__init__(id)
         self.width = width
         self.height = height
         self.x = x
         self.y = y
-
+        super().__init__(id)
+        
     @property
     def width(self):
         """retrieves the private attr of width"""
@@ -71,7 +71,7 @@ class Rectangle(Base):
         if not isinstance(value, int):
             raise TypeError("x must be an integer")
         elif value < 0:
-            raise ValueError("x must be > 0")
+            raise ValueError("x must be >= 0")
         self.__x = value
 
     @property
@@ -85,5 +85,10 @@ class Rectangle(Base):
         if not isinstance(value, int):
             raise TypeError("y must be an integer")
         elif value < 0:
-            raise ValueError("y must be > 0")
-        self.__y = value
+            raise ValueError("y must be >= 0")
+        self.__y = value   
+        
+    def area(self):
+        """returns the area of rectangle"""
+        return self.__height * self.__width
+        
