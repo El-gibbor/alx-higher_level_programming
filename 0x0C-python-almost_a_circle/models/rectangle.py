@@ -22,14 +22,11 @@ class Rectangle(Base):
                 x & y axes intersect. so, the setter properties for x & y value
                 validates if they're less than 0.
         """
-
-        """call super class so that the base class __init__ logic
-        can be used. this is also the id of the class
-        """
         self.width = width
         self.height = height
         self.x = x
         self.y = y
+        # inherites the base class attr logic
         super().__init__(id)
 
     @property
@@ -120,8 +117,8 @@ class Rectangle(Base):
 
     def update(self, *args):
         """updates/assign an argument to each attribute. the else clause
-        ensures the attribute retains its original, previous or default value
-        of optional argument when no argument is provided for update
+        ensures that the attribute retains its original, previous or default
+        value of optional argument when no argument is provided for update
         in this method()
         """
         self.id = args[0] if len(args) >= 1 else self.id
@@ -129,3 +126,13 @@ class Rectangle(Base):
         self.height = args[2] if len(args) >= 3 else self.height
         self.x = args[3] if len(args) >= 4 else self.x
         self.y = args[4] if len(args) >= 5 else self.y
+
+    def update(self, *args, **kwargs):
+        """unpacks the key-value paired key word arguments to update
+        the attributea. happens only when *args doesnt exit or empty
+        """
+        if len(args) > 0:
+            self.id, self.width, self.height, self.x, self.y = args
+        else:
+            for keyz, valz in kwargs.items():
+                setattr(self, keyz, valz)
