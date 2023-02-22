@@ -93,7 +93,7 @@ class Rectangle(Base):
         return self.__height * self.__width
 
     def display(self):
-        """prints the rctangle shae with # """
+        """prints the rctangle shape with # """
         for y in range(self.y):
             print("")
         for row in range(self.__height):
@@ -108,27 +108,24 @@ class Rectangle(Base):
             .format(self.id, self.__x, self.__y, self.__width, self.__height)
 
     def display(self):
-        """# triangle character taking x and y corndinates  # """
-        for y in range(self.y):
+        """# triangle character taking x and y corndinates into account"""
+        for i in range(self.y):
             print("")
-        for row in range(self.__height):
-            for x in range(self.x):
+        for hori_line in range(self.__height):
+            for j in range(self.x):
                 print(" ", end="")
-            for column in range(self.__width):
+            for vert_line in range(self.__width):
                 print("#", end="")
             print()
-    
+
     def update(self, *args):
         """updates/assign an argument to each attribute. the else clause
         ensures the attribute retains its original, previous or default value
-        of optional argument when no argument is provided for update in this method()
+        of optional argument when no argument is provided for update
+        in this method()
         """
         self.id = args[0] if len(args) >= 1 else self.id
         self.width = args[1] if len(args) >= 2 else self.width
         self.height = args[2] if len(args) >= 3 else self.height
         self.x = args[3] if len(args) >= 4 else self.x
         self.y = args[4] if len(args) >= 5 else self.y
-        
-        
-        
-        
