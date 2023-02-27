@@ -1,3 +1,4 @@
+# pylint: disable=too-many-instance-attributes
 #!/usr/bin/python3
 """a module that contains a sub class from class, Base """
 
@@ -6,6 +7,9 @@ from models.base import Base
 
 class Rectangle(Base):
     """initializes instance attributes"""
+
+    # pylint: ignored=too-many-instance-attributes
+    # i have only 5 which is not even upto 7
 
     def __init__(self, width, height, x=0, y=0, id=None):
         """Initializes all attributes of rectangle
@@ -39,7 +43,7 @@ class Rectangle(Base):
         """assign initialised argument to the right attributea value"""
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
-        elif value <= 0:
+        if value <= 0:
             raise ValueError("width must be > 0")
         self.__width = value
 
@@ -53,7 +57,7 @@ class Rectangle(Base):
         """assign initialised argument to the right attributea value"""
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
-        elif value <= 0:
+        if value <= 0:
             raise ValueError("height must be > 0")
         self.__height = value
 
@@ -67,7 +71,7 @@ class Rectangle(Base):
         """assign initialised argument to the right attributea value"""
         if not isinstance(value, int):
             raise TypeError("x must be an integer")
-        elif value < 0:
+        if value < 0:
             raise ValueError("x must be >= 0")
         self.__x = value
 
@@ -81,7 +85,7 @@ class Rectangle(Base):
         """assign initialised argument to the right attributea value"""
         if not isinstance(value, int):
             raise TypeError("y must be an integer")
-        elif value < 0:
+        if value < 0:
             raise ValueError("y must be >= 0")
         self.__y = value
 
@@ -91,12 +95,12 @@ class Rectangle(Base):
 
     def display(self):
         """prints the rctangle shape with # """
-        for y in range(self.y):
+        for _ in range(self.y):
             print("")
-        for row in range(self.__height):
-            for x in range(self.x):
+        for _ in range(self.__height):
+            for _ in range(self.x):
                 print(" ", end="")
-            for column in range(self.__width):
+            for _ in range(self.__width):
                 print("#", end="")
             print()
 
@@ -106,12 +110,12 @@ class Rectangle(Base):
 
     def display(self):
         """# triangle character taking x and y corndinates into account"""
-        for i in range(self.y):
+        for _ in range(self.y):
             print("")
-        for hori_line in range(self.__height):
-            for j in range(self.x):
+        for _ in range(self.__height):
+            for _ in range(self.x):
                 print(" ", end="")
-            for vert_line in range(self.__width):
+            for _ in range(self.__width):
                 print("#", end="")
             print()
 
@@ -127,12 +131,12 @@ class Rectangle(Base):
         self.x = args[3] if len(args) >= 4 else self.x
         self.y = args[4] if len(args) >= 5 else self.y
 
-    def update(self, *args, **kwargs):
-        """unpacks the key-value paired key word arguments to update
-        the attributea. happens only when *args doesnt exit or empty
-        """
-        if len(args) > 0:
-            self.id, self.width, self.height, self.x, self.y = args
-        else:
-            for keyz, valz in kwargs.items():
-                setattr(self, keyz, valz)
+    # def update(self, *args, **kwargs):
+    #     """unpacks the key-value paired key word arguments to update
+    #     the attributea. happens only when *args doesnt exit or empty
+    #     """
+    #     if len(args) > 0:
+    #         self.id, self.width, self.height, self.x, self.y = args
+    #     else:
+    #         for keyz, valz in kwargs.items():
+    #             setattr(self, keyz, valz)
