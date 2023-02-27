@@ -7,8 +7,6 @@ from models.base import Base
 class Rectangle(Base):
     """initializes instance attributes"""
 
-    # pylint: ignored=too-many-instance-attributes
-    # i have only 5 which is not even upto 7
 
     def __init__(self, width, height, x=0, y=0, id=None):
         """Initializes all attributes of rectangle
