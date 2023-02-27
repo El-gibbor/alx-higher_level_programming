@@ -1,7 +1,6 @@
 # pylint: disable=too-many-instance-attributes
 #!/usr/bin/python3
 """a module that contains a sub class from class, Base """
-
 from models.base import Base
 
 
