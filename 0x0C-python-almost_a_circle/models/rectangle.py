@@ -119,11 +119,16 @@ class Rectangle(Base):
                 print("#", end="")
             print()
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """updates/assign an argument to each attribute. the else clause
         ensures that the attribute retains its original, previous or default
         value of optional argument when no argument is provided for update
         in this method()
+        
+        Args:
+            *args: argument assigned to each attribute
+            **kwargs: key-value paired arg assigned to each attribute: happens only
+            when *args is empty or doesn't exist.
         """
         self.id = args[0] if len(args) >= 1 else self.id
         self.width = args[1] if len(args) >= 2 else self.width
@@ -131,12 +136,5 @@ class Rectangle(Base):
         self.x = args[3] if len(args) >= 4 else self.x
         self.y = args[4] if len(args) >= 5 else self.y
 
-    # def update(self, *args, **kwargs):
-    #     """unpacks the key-value paired key word arguments to update
-    #     the attributea. happens only when *args doesnt exit or empty
-    #     """
-    #     if len(args) > 0:
-    #         self.id, self.width, self.height, self.x, self.y = args
-    #     else:
-    #         for keyz, valz in kwargs.items():
-    #             setattr(self, keyz, valz)
+        for keyz, valz in kwargs.items():
+            setattr(self, keyz, valz)
