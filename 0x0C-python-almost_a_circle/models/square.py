@@ -3,30 +3,57 @@
 from models.rectangle import Rectangle
 
 
+# class Square(Rectangle):
+#     """defines a Square"""
+
+#     def __init__(self, size, x=0, y=0, id=None):
+#         """initializing attr by using the __init__ logic of the superclass"""
+#         super().__init__(size, size, x, y, id=None)
+#         self.size = size
+
+#         """p-decorator for size attribute. this sets the value for both
+#         height and width, ensuring the value of height and width are
+#         always equal for a square object.
+#         """
+#     @property
+#     def size(self):
+#         return self.width
+
+#     @size.setter
+#     def size(self, size_val):
+#         """validations are already implemented in the superclass
+#         property decorator & setter
+#         """
+#         self.width = size_val
+#         self.height = size_val
+
+#     def __str__(self):
+#         return "[Square] ({}) {}/{} - {}"\
+#             .format(self.id, self.x, self.y, self.size)
 class Square(Rectangle):
-    """defines a Square"""
-
+    """Represents a square"""
     def __init__(self, size, x=0, y=0, id=None):
-        """initializing attr by using the __init__ logic of the superclass"""
-        super().__init__(size, size, x, y, id=None)
         self.size = size
-
-        """p-decorator for size attribute. this sets the value for both
-        height and width, ensuring the value of height and width are
-        always equal for a square object.
-        """
-    @property
-    def size(self):
-        return self.width
-
-    @size.setter
-    def size(self, size_val):
-        """validations are already implemented in the superclass
-        property decorator & setter
-        """
-        self.width = size_val
-        self.height = size_val
+        self.x = x
+        self.y = y
+        self.id = None
+        super().__init__(size, size, x, y, id)
 
     def __str__(self):
-        return "[Square] ({}) {}/{} - {}"\
-            .format(self.id, self.x, self.y, self.size)
+        """Defines a format for the string representation of the class"""
+        return f"[Square] ({self.id}) {self.x}/{self.y} - {self.size}"
+
+    @property
+    def size(self):
+        """Gets the value of size"""
+        return self.__width
+
+    @size.setter
+    def size(self, value):
+        """Sets the value for size"""
+        if type(value) is not int:
+            raise TypeError("width must be an integer")
+        if value <= 0:
+            raise ValueError("width must be > 0")
+        self.__width = value
+        self.__height = value
