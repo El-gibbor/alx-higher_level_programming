@@ -1,4 +1,3 @@
-# pylint: disable=syntax-error
 #!/usr/bin/python3
 """a module for square which inherites the Rectangle"""
 from models.rectangle import Rectangle
@@ -32,7 +31,8 @@ class Square(Rectangle):
         return f"[Square] ({self.id}) {self.x}/{self.y} - {self.size}"
 
     def update(self, *args, **kwargs):
-        """info about this method() is documented in the superclass update method()
+        """info about this method() is documented in the superclass
+        update method()
         """
         self.id = args[0] if len(args) >= 1 else self.id
         self.size = args[1] if len(args) >= 2 else self.size
