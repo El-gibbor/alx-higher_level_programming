@@ -19,5 +19,6 @@ class Base:
     def to_json_string(list_dictionaries):
         """serialises contents of list_dictionaries (list_of_dict to json)"""
         if list_dictionaries is None or len(list_dictionaries) == 0:
-            return []
+            return "[]"
         return dumps(list_dictionaries)
+
