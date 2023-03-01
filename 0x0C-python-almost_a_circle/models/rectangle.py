@@ -138,4 +138,4 @@ class Rectangle(Base):
 
     def to_dictionary(self):
         """returns dictionary representation of rectangle (it attributes)"""
-        return vars(self)
+        return self.__dict__
