@@ -1,12 +1,11 @@
-# pylint: disable=too-many-instance-attributes
 #!/usr/bin/python3
+# pylint: disable=too-many-instance-attributes
 """a module that contains a sub class from class, Base """
 from models.base import Base
 
 
 class Rectangle(Base):
     """initializes instance attributes"""
-
 
     def __init__(self, width, height, x=0, y=0, id=None):
         """Initializes all attributes of rectangle
@@ -121,10 +120,11 @@ class Rectangle(Base):
         ensures that the attribute retains its original, previous or default
         value of optional argument when no argument is provided for update
         in this method()
-        
+
         Args:
             *args: argument assigned to each attribute
-            **kwargs: key-value paired arg assigned to each attribute: happens only
+            **kwargs: key-value paired arg assigned to each attribute:
+            happens only
             when *args is empty or doesn't exist.
         """
         self.id = args[0] if len(args) >= 1 else self.id
@@ -135,7 +135,7 @@ class Rectangle(Base):
 
         for keyz, valz in kwargs.items():
             setattr(self, keyz, valz)
-            
+
     def to_dictionary(self):
         """returns dictionary representation of rectangle (it attributes)"""
         return vars(self)
