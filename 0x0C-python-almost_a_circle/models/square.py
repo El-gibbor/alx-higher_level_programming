@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+ #!/usr/bin/python3
 """a module for square which inherites the Rectangle"""
 from models.rectangle import Rectangle
 

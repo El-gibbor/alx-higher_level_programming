@@ -135,3 +135,7 @@ class Rectangle(Base):
 
         for keyz, valz in kwargs.items():
             setattr(self, keyz, valz)
+            
+    def to_dictionary(self):
+        """returns dictionary representation of rectangle (it attributes)"""
+        return vars(self)

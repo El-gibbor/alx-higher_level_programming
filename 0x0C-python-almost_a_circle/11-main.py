@@ -14,7 +14,7 @@ if __name__ == "__main__":
     print(s1)
 
     s1.update(1, 2, 3)
-    print(s1)p
+    print(s1)
 
     s1.update(1, 2, 3, 4)
     print(s1)
