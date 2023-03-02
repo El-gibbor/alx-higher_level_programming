@@ -36,3 +36,15 @@ class Base:
     def from_json_string(json_string):
         """returns the list represented by json_str (json to python(list))"""
         return loads(json_string) if json_string else []
+
+    @classmethod
+    def create(cls, **dictionary):
+        """returns an instance with all attributes already set by creating a
+        dummy instance as a placeholder for the actual instance attr and values
+        """
+        if cls.__name__ == "Rectangle":
+            dummy_cls_obj = cls(5, 8)
+        if cls.__name__ == "Square":
+            dummy_cls_obj = cls(9)
+        dummy_cls_obj.update(**dictionary)
+        return dummy_cls_obj
