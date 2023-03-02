@@ -1,8 +1,15 @@
 # Alx: Higher Level Programming (python)  
 ### This repository contains all python task excersises done during the second sprint of alx sofware engineering program.  
 | Task Modules   |Details|
-|:----------------------|:---------------|  
-|0x00. Python - Hello, World.|Introduction to python, String formatters in python3, compilation and using python interpreter, pycodesyle.|
-|0x01. Python - if/else, loops, functions.|Control flow tools, looping, writing of python functions.
-|0x02. Python - import & modules.|Modules (Creation, importation and uses of imported functions and modules), command line arguments.|
-|0x04. Python - More Data Structures: Set, Dictionary|using lambda function, map, list comprehension, filter and reduce to solve some tasks on sets, dictionary and lists.|
+|:----------------------:|:---------------|  
+|[Python - Hello, World](https://github.com/El-gibbor/alx-higher_level_programming/tree/master/0x00-python-hello_world)|Introduction to python, String formatters in python3, compilation and using python interpreter, pycodesyle.|
+|[If/else, loops, functions in Python](https://github.com/El-gibbor/alx-higher_level_programming/tree/master/0x01-python-if_else_loops_functions)|Control flow tools, looping, writing of python functions.
+|[Python - import & modules](https://github.com/El-gibbor/alx-higher_level_programming/tree/master/0x02-python-import_modules)|Modules (Creation, importation and uses of imported functions and modules), command line arguments.|
+|[Data Structures in Python](https://github.com/El-gibbor/alx-higher_level_programming/tree/master/0x03-python-data_structures)|Tuple packing, sequence unpacking, lists, using lists as stacks and queues, del statements|  
+|[More Data Structures in Python](https://github.com/El-gibbor/alx-higher_level_programming/tree/master/0x04-python-more_data_structures)|Using  Set, Dictionary lambda function, map, list comprehension, filter and reduce to solve some tasks on sets, dictionary and lists.|  
+|[Errors & exceptions in Python](https://github.com/El-gibbor/alx-higher_level_programming/tree/master/0x05-python-exceptions)|How to correctly handle an exception, How to raise a builtin exception, When do we need to implement a clean-up action after an exception|  
+|[Classes in Python](https://github.com/El-gibbor/alx-higher_level_programming/tree/master/0x06-python-classes)|OOP, object and instances, class and instance attributes, using special magic methods, Data Abstraction, Data Encapsulation, and Information Hiding, pythonic way to write getter and setter, etc|  
+|[TDD in Python](https://github.com/El-gibbor/alx-higher_level_programming/tree/master/0x07-python-test_driven_development)|Test driven development: writing interactive test, How to write Docstrings to create tests,  basic option flags to create tests, finding edge cases, documenting each module and function, finding, unit testing|  
+|[More classes in Python](https://github.com/El-gibbor/alx-higher_level_programming/tree/master/0x08-python-more_classes)|Exploring special methods like: __str__, __repr__, class and static methods,How to dynamically create arbitrary new attributes for existing instances of a class|  
+|[Everythin is Object](https://github.com/El-gibbor/alx-higher_level_programming/tree/master/0x09-python-everything_is_object)|call by reference, assignments, alias, displaying variable identifier (which is the memory address in the CPython implementation), object mutability and imutability(builtin types)|  
+|[Python Iheritance](https://github.com/El-gibbor/alx-higher_level_programming/tree/master/0x0A-python-inheritance)|
