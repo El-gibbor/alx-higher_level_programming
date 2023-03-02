@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """a module for the class Base of all other classes in this project"""
-from json import dumps
+from json import dumps, loads
 
 
 class Base:
@@ -31,3 +31,8 @@ class Base:
                 for values in list_objs:
                     listz.append(values.to_dictionary())
             file.write(cls.to_json_string(listz))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """returns the list represented by json_str (json to python(list))"""
+        return loads(json_string)
