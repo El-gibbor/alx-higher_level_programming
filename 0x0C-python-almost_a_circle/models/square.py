@@ -11,9 +11,9 @@ class Square(Rectangle):
         super().__init__(size, size, x, y, id)
         self.size = size
 
-        """p-decorator for size attribute. this sets the value for both
-        height and width, ensuring the value of height and width are
-        always equal for a square object.
+        """property decorator for size attribute: this sets the
+        value for both height and width, ensuring the value of
+        height and width are always equal for a square object.
         """
     @property
     def size(self):
