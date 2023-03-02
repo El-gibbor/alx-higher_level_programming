@@ -40,7 +40,7 @@ class Base:
     @classmethod
     def create(cls, **dictionary):
         """returns an instance with all attributes already set by creating a
-        dummy instance as a placeholder for the actual instance attr and values
+        dummy instance as a placeholder for the actual instz attr and values
         """
         if cls.__name__ == "Rectangle":
             dummy_cls_obj = cls(5, 8)
