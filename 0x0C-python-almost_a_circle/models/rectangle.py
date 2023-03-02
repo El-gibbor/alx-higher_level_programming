@@ -90,7 +90,10 @@ class Rectangle(Base):
         return self.__height * self.__width
 
     def display(self):
-        """prints the rctangle shape with # """
+        """prints the rctangle shape with # 
+        underscore is used here as the iterating variable because the value
+        of the iteration is redundant (wouldn't be printed)
+        """
         for _ in range(self.y):
             print("")
         for _ in range(self.__height):
