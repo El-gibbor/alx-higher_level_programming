@@ -35,4 +35,4 @@ class Base:
     @staticmethod
     def from_json_string(json_string):
         """returns the list represented by json_str (json to python(list))"""
-        return loads(json_string)
+        return loads(json_string) if json_string else []
