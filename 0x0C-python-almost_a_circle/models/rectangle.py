@@ -127,8 +127,7 @@ class Rectangle(Base):
         Args:
             *args: argument assigned to each attribute
             **kwargs: key-value paired arg assigned to each attribute:
-            happens only
-            when *args is empty or doesn't exist.
+            happens only when *args is empty or doesn't exist.
         """
         self.id = args[0] if len(args) >= 1 else self.id
         self.width = args[1] if len(args) >= 2 else self.width
