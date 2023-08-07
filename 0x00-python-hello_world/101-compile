@@ -1,5 +1,6 @@
 #!/bin/bash
 python3 -m compileall "$PYFILE" # compile file with compileall module
+
 # get the pyc file and discard it's directory.
 mv __pycache__/*.pyc "${PYFILE}c"
 rm -r __pycache__
