@@ -9,7 +9,7 @@ This project aims to get us acquainted with the below objectives:
 * __How to Print Text and Variables using Print__: Master the print function to display text and variables in the console.  
 * __How to Use Strings__: Understand the concept of strings, a fundamental data type in Python, and learn how to manipulate them.
 * Explore how to access individual elements (indexing) and subsequences (slicing) of strings and other data structures.
-* __What is the Official Python Coding Style and How to Check Your Code with Pycodestyle__: Familiarize ourself with PEP 8, the official style guide for Python code, and learn how to use pycodestyle to ensure our code adheres to the recommended style.
+* __The Official Python Coding Style and How to Check our Code with Pycodestyle__: Familiarize ourselves with PEP 8, the official style guide for Python code, and learn how to use pycodestyle to ensure our code adheres to the recommended style.
 ## Resources 🧠 
 [Using the python Interpreter](https://docs.python.org/3/tutorial/interpreter.html)  
 [How to use str format in python3](https://realpython.com/python-f-strings/)  
