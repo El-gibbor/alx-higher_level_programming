@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 def remove_char_at(str, n):
+    removed=""
     for i in range(len(str)):
-
-I DON TIRE! MAKE I FIND FOOD CHOP FIRST, NA PERSON WEY DEY ALIVE DEY DO TASK
+        if i != n:
+            removed += str[i]
+    return removed
