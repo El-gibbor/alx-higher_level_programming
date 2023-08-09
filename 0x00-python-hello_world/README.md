@@ -10,7 +10,10 @@ This project aims to get us acquainted with the below objectives:
 * __How to Use Strings__: Understand the concept of strings, a fundamental data type in Python, and learn how to manipulate them.
 * Explore how to access individual elements (indexing) and subsequences (slicing) of strings and other data structures.
 * __The Official Python Coding Style and How to Check our Code with Pycodestyle__: Familiarize ourselves with PEP 8, the official style guide for Python code, and learn how to use pycodestyle to ensure our code adheres to the recommended style.
+### 🔍 Disassembled Bytecode instructions (Advanced) 🔬   
+Understanding the set of instructions that the Python interpreter executes directly. This involves [Disassembling](https://docs.python.org/3.4/library/dis.html) bytecode which allows us to see the exact sequence of operations that the Python interpreter will perform when executing our Python code. It can provide insights into how the code is executed and help one understand the underlying mechanics.  
 ## Resources 🧠 
 [Using the python Interpreter](https://docs.python.org/3/tutorial/interpreter.html)  
 [How to use str format in python3](https://realpython.com/python-f-strings/)  
 [The Python tutorial](https://docs.python.org/3/tutorial/index.html) - Only the first 3 chapters for now  
+[Understanding the output of `dis.dis`](https://stackoverflow.com/questions/12673074/how-should-i-understand-the-output-of-dis-dis/12673195#12673195) - Disassembled python bytecode
