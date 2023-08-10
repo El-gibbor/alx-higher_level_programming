@@ -2,15 +2,15 @@
 # If-Else Statements, Loops, and Functions 💫  
 This project is tailored to provide us with a solid understanding of key concepts in Python programming, specifically focusing on if-else statements, loops, and functions.  
 ## Learning Objectives 🧠  
-The core objective of the task exercises in this directory is for us gain proficiency in the below listed area:
+The core objective of the task exercises in this directory is for us to gain proficiency in the below listed area:
 * Discover the reasons that make Python a powerful and versatile programming language  
 * Understand the significance of proper indentation in Python and how it affects code readability and structure.
-* How to Use the if and if...else Statements: Learn how to use conditional statements to make decisions in your code.
-* Dive into loop structures to automate repetitive tasks in your code (use of while and for loops).  
+* How to Use the if and if...else Statements: Learned how to use conditional statements to make decisions in a code.
+* Dive into loop structures to automate repetitive tasks in our code (use of while and for loops).  
 * controlling the flow of loops using `break` and `continue` statements.  
-* Learned about the range() function and how it simplifies working with sequences of numbers.  
+* Learn about the range() function and how it simplifies working with sequences of numbers.  
 * Grasp the concept of functions and how they help organize and modularize code.  
-* Scope of Variables: Explore the scope of variables and how their visibility changes in different parts of your code.
+* __Scope of Variables:__ Explore the scope of variables and how their visibility changes in different parts of your code.
 * __Understanding Tracebacks__: Learn about tracebacks and how they help identify the source of errors in your code.
 * Master the basic arithmetic operators (`+, -, *, /, %`) and their applications in Python.  
 ### 🔍 Bytecode instructions contd. (Advanced) 🔬
@@ -18,5 +18,5 @@ Understanding the set of instructions that the Python interpreter executes direc
 ## Resources 📚 
 [Control Flows](https://docs.python.org/3/tutorial/controlflow.html) - If-else, loops and functions  
 [The `dis.dis()` Module](https://docs.python.org/3.4/library/dis.html) - Disassembler for python bytecode  
-[Disassembled bytecode](https://stackoverflow.com/questions/12673074/how-should-i-understand-the-output-of-dis-dis/12673195#12673195) - Understand/read bytecode instructions
+[Disassembled bytecode](https://stackoverflow.com/questions/12673074/how-should-i-understand-the-output-of-dis-dis/12673195#12673195) - Stack execution of bytecode instructions
 
