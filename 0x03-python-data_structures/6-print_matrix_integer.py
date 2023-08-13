@@ -4,6 +4,9 @@ def print_matrix_integer(matrix=[[]]):
     if len(matrix) < 1:
             return None 
     for outer_list in matrix:
-        for sub_list in outer_list:
-            print('{}'.format(sub_list), end='')
+        for idx, sub_list in enumerate(outer_list):
+            if idx < 2:
+                print('{}'.format(sub_list), end=' ')
+            else:
+                print('{}'.format(sub_list), end='')
         print()
