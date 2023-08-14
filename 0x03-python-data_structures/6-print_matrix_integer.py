@@ -2,7 +2,7 @@
 
 def print_matrix_integer(matrix=[[]]):
     if len(matrix) < 1:
-            return None 
+        return None
     for outer_list in matrix:
         for idx, sub_list in enumerate(outer_list):
             if idx < 2:
