@@ -2,9 +2,6 @@
 
 def print_matrix_integer(matrix=[[]]):
     for outer_list in matrix:
-        for idx, sub_list in enumerate(outer_list):
-            if idx < 2:
-                print('{}'.format(sub_list), end=' ')
-            else:
-                print('{}'.format(sub_list), end='')
-        print()
+        for sub_list in (outer_list):
+            print('{}'.format(sub_list), end=' ' if sub_list[-1 else end='')
+    print()
