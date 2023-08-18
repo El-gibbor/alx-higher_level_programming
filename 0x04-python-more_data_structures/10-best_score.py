@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
 def best_score(a_dictionary):
-    if not lena_dictionary)
+    if not len(a_dictionary):
         return None
-    return max(key for key in a_dictionary.keys())
+    return max(k, for k in a_dictionary.keys())
