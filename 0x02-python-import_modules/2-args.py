@@ -9,4 +9,4 @@ elif (len(argv) - 1) == 1:
 else:
     print('{} arguments'.format(len(argv) - 1))
     for i, arg in enumerate(argv[1:], 1):
-       print('{}: {}'.format(i, arg))
+        print('{}: {}'.format(i, arg))
