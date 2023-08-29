@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 import sys
-"""prints an integer and directs exception errors to stderr"""
+"""prints an int and redirects exception errors to stderr"""
 
 
 def safe_print_integer_err(value):
