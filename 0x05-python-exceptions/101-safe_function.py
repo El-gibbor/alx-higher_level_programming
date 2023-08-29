@@ -2,6 +2,7 @@
 import sys
 """executes a func and prints exception erros to stderr"""
 
+
 def safe_function(fct, *args):
     try:
         return fct(*args)
