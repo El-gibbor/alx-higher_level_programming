@@ -48,8 +48,9 @@ class Square:
     def position(self, value):
         """validates and set value for position attribute"""
 
-        if not (isinstance(value, tuple)) or len(value) != 2\
-                or not any(isinstance(i, int) for i in value):
+        if type(value) is not tuple or len(value) != 2:
+            raise TypeError('position must be a tuple of 2 positive integers')
+        if not any(isinstance(i, int) for i in value):
             raise TypeError('position must be a tuple of 2 positive integers')
 
         if any(elem < 0 for elem in value):
