@@ -18,7 +18,6 @@ class Node:
     @property
     def data(self):
         """retrieves the data attribte of Node"""
-
         return self.__data
 
     @data.setter
@@ -32,7 +31,6 @@ class Node:
     @property
     def next_node(self):
         """retrives reference of the next node"""
-
         return self.__next_node
 
     @next_node.setter
@@ -43,4 +41,3 @@ class Node:
 class SinglyLinkedList:
     """a class SinglyLinkedList that defines a singly linked list"""
 
-    
