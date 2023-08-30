@@ -37,4 +37,10 @@ class Node:
 
     @next_node.setter
     def next_node(self, value):
-        
+        """validate and sets reference to the next node"""
+        if
+
+class SinglyLinkedList:
+    """a class SinglyLinkedList that defines a singly linked list"""
+
+    
