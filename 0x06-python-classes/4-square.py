@@ -21,11 +21,11 @@ class Square:
         """retrives private instance attribute"""
 
         return self.__size
-    
+
     @size.setter
     def size(self, value=0):
         """validate and sets attribute value"""
-    
+
         if type(value) is not int:
             raise TypeError('size must be an integer')
         if value < 0:
