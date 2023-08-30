@@ -7,9 +7,12 @@ class Square:
 
     def __init__(self, size=0):
         """
-        instantiate square with a size attribute
+            instantiate square with a size attribute
         Args:
             size - size of the square
+        raises:
+            ValueError - if size is less than 0
+            TypeError - if value is not an integer
         """
         if type(size) is not int:
             raise TypeError('size must be an integer')
