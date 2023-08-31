@@ -7,13 +7,13 @@ class Node:
 
     def __init__(self, data, next_node=None):
         """
-            Instatiates a node of a singly linked list
+            Instantiates a node object for the singly linked list
         Args:
             data (int) - value in the node
             next_node - reference/pointer to the next node
         """
-        self.__data = data
-        self.__next_node = next_node
+        self.data = data
+        self.next_node = next_node
 
     @property
     def data(self):
@@ -36,8 +36,39 @@ class Node:
     @next_node.setter
     def next_node(self, value):
         """validate and sets reference to the next node"""
-        if
+        if type(value) is not Node and value is not None:
+            raise TypeError('next_node must be a Node object')
+        self.__next_node = value
+
 
 class SinglyLinkedList:
     """a class SinglyLinkedList that defines a singly linked list"""
 
+    def __init__(self):
+        """instantiate head for the linked list"""
+        self.head = None
+
+    def sorted_insert(self, value):
+        """ inserts a new Node into the correct sorted position """
+
+        new_node = Node(value)  # creates a node object with its data
+        if not self.head or value < self.head.data:
+            new_node.next_node = self.head
+            self.head = new_node
+            return
+
+        curr = self.head
+        while curr.next_node and curr.next_node.data < value:
+            curr = curr.next_node
+        new_node.next_node = curr.next_node
+        curr.next_node = new_node
+
+    def __str__(self):
+        """print entire list to stdout, one node number by line"""
+
+        dummy_list, to_stdout = self.head, []
+
+        while dummy_list:
+            to_stdout.append(str(dummy_list.data))
+            dummy_list = dummy_list.next_node
+        return '\n'.join(to_stdout)
