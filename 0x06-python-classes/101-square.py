@@ -58,13 +58,13 @@ class Square:
         """prints the square made up of # to stdout"""
         to_stdout = ""
         if self.__size == 0:
-            print()
-        # the tuple 'position' prints the spaces
+            to_stdout += '\n'
+        # the tuple 'position' handles spaces
         for _ in range(self.__position[1]):
             print()
         for _ in range(self.__size):
             to_stdout += " " * self.__position[0] + "#" * self.__size + '\n'
-        return to_stdout[:-1]
+        return to_stdout[:-1]  # [:-1] removes last newline character printed
 
     def __str__(self):
         """prints an instance of Square like my_print() func"""
