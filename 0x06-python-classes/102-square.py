@@ -35,20 +35,20 @@ class Square:
         """ Returns the current square area"""
         return self.__size ** 2
 
-    def __ne__(self, other):
-        return self.area() != other.area()
+    def __ne__(self, compare_me):
+        return self.area() != compare_me.area()
 
-    def __gt__(self, other):
-        return self.area() > other.area()
+    def __gt__(self, compare_me):
+        return self.area() > compare_me.area()
 
-    def __eq__(self, other):
-        return self.area() == other.area()
+    def __eq__(self, compare_me):
+        return self.area() == compare_me.area()
 
-    def __le__(self, other):
-        return self.area() <= other.area()
+    def __le__(self, compare_me):
+        return self.area() <= compare_me.area()
 
-    def __lt__(self, other):
-        return self.area() < other.area()
+    def __lt__(self, compare_me):
+        return self.area() < compare_me.area()
 
-    def __ge__(self, other):
-        return self.area() >= other.area()
+    def __ge__(self, compare_me):
+        return self.area() >= compare_me.area()
