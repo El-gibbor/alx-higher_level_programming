@@ -61,7 +61,7 @@ class Square:
             to_stdout += '\n'
         # the tuple 'position' handles spaces
         for _ in range(self.__position[1]):
-            print()
+            to_stdout += '\n'
         for _ in range(self.__size):
             to_stdout += " " * self.__position[0] + "#" * self.__size + '\n'
         return to_stdout[:-1]  # [:-1] removes last newline character printed
