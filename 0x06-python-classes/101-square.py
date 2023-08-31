@@ -56,10 +56,10 @@ class Square:
 
     def my_print(self):
         """prints the square made up of # to stdout"""
+
         to_stdout = ""
         if self.__size == 0:
             to_stdout += '\n'
-        # the tuple 'position' handles spaces
         for _ in range(self.__position[1]):
             to_stdout += '\n'
         for _ in range(self.__size):
