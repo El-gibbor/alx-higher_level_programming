@@ -63,7 +63,7 @@ class Square:
         for _ in range(self.__position[1]):
             to_stdout += '\n'
         for _ in range(self.__size):
-            to_stdout += " " * self.__position[0] + "#" * self.__size + '\n'
+            to_stdout += (" " * self.__position[0] + "#" * self.__size + '\n')
         return to_stdout[:-1]  # [:-1] removes last newline character printed
 
     def __str__(self):
