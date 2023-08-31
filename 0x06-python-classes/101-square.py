@@ -63,9 +63,9 @@ class Square:
         for _ in range(self.__position[1]):
             print()
         for _ in range(self.__size):
-            to_stdout += (" " * self.__position[0] + "#" * self.__size + '\n')
+            to_stdout += " " * self.__position[0] + "#" * self.__size + '\n'
         return to_stdout
 
     def __str__(self):
         """prints an instance of Square like my_print() func"""
-        return Square.my_print(self)
+        return self.my_print()
