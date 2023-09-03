@@ -40,7 +40,7 @@ usage: Test for one missing argument
 123
 
 usage: Empty parameter (missing to arguments)
->>> add_integer()
+add_integer()
 Traceback (most recent call last)
 ...
 TypeError: add_integer() missing 1 required positional argument: 'a'
