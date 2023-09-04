@@ -71,4 +71,3 @@ class Rectangle:
             return ""
         hash_row = ['#' * self.__width for _ in range(self.__height)]
         return '\n'.join(hash_row)
-
