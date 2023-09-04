@@ -1,4 +1,6 @@
-class User:
-    id = 1
+#!/usr/bin/python3
+""" Module for a class Rectangle"""
 
-print(User.id)
+
+class Rectangle:
+    pass
