@@ -1,6 +1,4 @@
 #!/usr/bin/python3
-count = 0
 def magic_string():
-    global count
-    count += 1
-    return "BestSchool" * count
+    magic_string.idx = getattr(magic_string, 'idx', 0) + 1
+    return ", ".join(["BestSchool" for _ in range(magic_string.idx)])
