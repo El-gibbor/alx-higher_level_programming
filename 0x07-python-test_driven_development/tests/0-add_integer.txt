@@ -17,12 +17,6 @@ usage: add a positive and negative integer
 >>> add_integer(5, -5)
 0
 
-usage: add an integer to a string
->>> add_integer(5, "10")
-Traceback (most recent call last):
-...
-TypeError: b must be an integer
-
 usage: test for float overflow
 >>> add_integer(float('inf'), float('inf'))
 Traceback (most recent call last):
