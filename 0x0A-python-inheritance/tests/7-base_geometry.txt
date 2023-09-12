@@ -1,76 +1,68 @@
-"""
-Testing the integer_validator method of the BaseGeometry class.
+Testing "7-base_geometry" module.
+=================================
+using "integer_validator()" method
+----------------------------------
 
->>> from 7-base_geometry import BaseGeometry
+A public instance method that validates value.
+
+Imprt the module:
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 >>> bg = BaseGeometry()
 
-# Test case 1: Missing arguments
+test for Missing arguments
+--------------------------
 >>> bg.integer_validator()
 Traceback (most recent call last):
 ...
-TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+TypeError: BaseGeometry.integer_validator() missing 2 required positional arguments: 'name' and 'value'
 
-# Test case 2: Missing 'value' argument
+Test for Missing 'value' argument
+---------------------------------
 >>> bg.integer_validator("Hello")
 Traceback (most recent call last):
 ...
-TypeError: integer_validator() missing 1 required positional argument: 'value'
+TypeError: BaseGeometry.integer_validator() missing 1 required positional argument: 'value'
 
-# Test case 3: Non-integer 'value'
->>> bg.integer_validator("Hello", None)
+Testing negative or zreo values
+--------------------------------
+>>> bg.integer_validator("El-gibbor", -1)
 Traceback (most recent call last):
 ...
-TypeError: Hello must be an integer
+ValueError: El-gibbor must be greater than 0
 
-# Test case 4: Non-integer 'value'
->>> bg.integer_validator("Hello", "a")
+>>> bg.integer_validator("El-gibbor", 0)
 Traceback (most recent call last):
 ...
-TypeError: Hello must be an integer
+ValueError: El-gibbor must be greater than 0
 
-# Test case 5: Negative 'value'
->>> bg.integer_validator("Hello", -4)
+Test for non-integer values (list)
+-----------------------------------
+>>> bg.integer_validator("El-gibbor", [2, 44])
 Traceback (most recent call last):
 ...
-ValueError: Hello must be greater than 0
+TypeError: El-gibbor must be an integer
 
-# Test case 6: Valid integer 'value'
->>> bg.integer_validator("Hello", 4)
-
-# Test case 7: Zero 'value'
->>> bg.integer_validator("Hello", 0)
+>>> bg.integer_validator("El-gibbor", (2, ))
 Traceback (most recent call last):
 ...
-ValueError: Hello must be greater than 0
+TypeError: El-gibbor must be an integer
 
-# Test case 8: Non-integer 'value' (list)
->>> bg.integer_validator("Hello", [1])
+>>> bg.integer_validator("float", 4.5)
 Traceback (most recent call last):
 ...
-TypeError: Hello must be an integer
+TypeError: float must be an integer
 
-# Test case 9: Non-integer 'value' (tuple)
->>> bg.integer_validator("Hello", (1, 2))
+>>> bg.integer_validator("El-gibbor", "str")
 Traceback (most recent call last):
 ...
-TypeError: Hello must be an integer
+TypeError: El-gibbor must be an integer
 
-# Test case 10: Non-integer 'value' (set)
->>> bg.integer_validator("Hello", {1, 2})
+>>> bg.integer_validator("El-gibbor", None)
 Traceback (most recent call last):
 ...
-TypeError: Hello must be an integer
+TypeError: El-gibbor must be an integer
 
-# Test case 11: Call to area() method
->>> bg.area()
+>>> bg.integer_validator(bool, True)
 Traceback (most recent call last):
 ...
-Exception: area() is not implemented
-
-# Test case 12: Non-integer 'value' (boolean)
->>> bg.integer_validator("Hello", True)
-Traceback (most recent call last):
-...
-TypeError: Hello must be an integer
-"""
-
+TypeError: <class 'bool'> must be an integer
