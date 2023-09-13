@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" a module containing a derived class of BaseGeometry"""
+""" a module containing a derived class of Rectangle """
 Rectangle = __import__('9-rectangle').Rectangle
 
 
