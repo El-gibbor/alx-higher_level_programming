@@ -4,7 +4,7 @@ Rectangle = __import__('9-rectangle').Rectangle
 
 
 class Square(Rectangle):
-    """ defines a rectangle, subclass of Geometery """
+    """ defines a square, subclass of Rectangle """
 
     def __init__(self, size):
         """ instantiation of instance attributes"""
@@ -12,7 +12,7 @@ class Square(Rectangle):
         self.__size = size
 
     def area(self):
-        """ returns the area of a rectangle """
+        """ returns the area of a square """
         return self.__size * self.__size
 
     def __str__(self):
