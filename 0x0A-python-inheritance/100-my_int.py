@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" A module containing a derived class of int"""
+# """ A module containing a derived class of int"""
 
 
 class MyInt(int):
@@ -7,8 +7,8 @@ class MyInt(int):
 
     def __eq__(self, data):
         """Override == opeartor with != """
-        return self.real != data
+        return super().__ne__(data)
 
     def __ne__(self, data):
         """Override != operator with == """
-        return self.real == data
+        return super().__eq__(data)
