@@ -21,4 +21,3 @@ class Square(Rectangle):
         """
         x = "[{}] {}/{}".format(type(self).__name__, self.__size, self.__size)
         return x
-
