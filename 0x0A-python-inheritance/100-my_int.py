@@ -5,10 +5,10 @@
 class MyInt(int):
     """ Defines a derieved class of int """
 
-    def __eq__(self, date):
+    def __eq__(self, data):
         """Override == opeartor with != """
-        return self.real != date
+        return self.real != data
 
-    def __ne__(self, date):
+    def __ne__(self, data):
         """Override != operator with == """
-        return self.real == date
+        return self.real == data
