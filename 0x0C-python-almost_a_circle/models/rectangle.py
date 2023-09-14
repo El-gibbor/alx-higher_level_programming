@@ -86,3 +86,9 @@ class Rectangle(Base):
         x = [['#' for _ in range(self.__width)] for _ in range(self.__height)]
         for each_row in x:
             print(''.join(each_row))
+
+    def __str__(self):
+        """ return format: [Rectangle] (<id>) <x>/<y> - <width>/<height>"""
+
+        return "[Rectangle] ({}) {}/{} - {}/{}"\
+            .format(self.id, self.__x, self.__y, self.__width, self.__height)
