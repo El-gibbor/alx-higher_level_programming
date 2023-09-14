@@ -4,7 +4,7 @@ from base import Base
 
 
 class Rectangle(Base):
-    """ Defines a the class Rectangle derieved from Base """
+    """ Defines the class Rectangle derieved from Base """
 
     def __init__(self, width, height, x=0, y=0, id=None):
         """ Initializing instance attributes
