@@ -76,6 +76,13 @@ class Rectangle(Base):
             raise ValueError('y must be >= 0')
         self.__y = data
 
-    def area(self):
+    def area(self) -> int:
         """ Returns area of the rectangle """
         return self.__height * self.__width
+
+    def display(self):
+        """ prints in stdout the Rectangle instance with the character # """
+
+        x = [['#' for _ in range(self.__width)] for _ in range(self.__height)]
+        for each_row in x:
+            print(''.join(each_row))
