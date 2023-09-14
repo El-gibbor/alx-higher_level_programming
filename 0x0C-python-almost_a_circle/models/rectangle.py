@@ -48,4 +48,30 @@ class Rectangle(Base):
             raise ValueError('height must be > 0')
         self.__height = data
 
-    
+    @property
+    def x(self) -> int:
+        """ retrieves x attribute for validation """
+        return self.__x
+
+    @x.setter
+    def x(self, data):
+        """ validates and set values for x attribute """
+        if type(data) != int:
+            raise TypeError('x must be an integer')
+        if data < 0:
+            raise ValueError('x must be >= 0')
+        self.__x = data
+
+    @property
+    def y(self) -> int:
+        """ retrieves y attribute for validation """
+        return self.__y
+
+    @y.setter
+    def y(self, data):
+        """ validates and set values for y attribute """
+        if type(data) != int:
+            raise TypeError('y must be an integer')
+        if data < 0:
+            raise ValueError('y must be >= 0')
+        self.__y = data
