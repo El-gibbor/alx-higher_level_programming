@@ -19,3 +19,33 @@ class Rectangle(Base):
         self.height = height
         self.x = x
         self.y = y
+
+    @property
+    def width(self) -> int:
+        """ retrieves width attribute for validation """
+        return self.__width
+
+    @width.setter
+    def width(self, data):
+        """ validates and set values for width attribute """
+        if type(data) != int:
+            raise TypeError('width must be an integer')
+        if data <= 0:
+            raise ValueError('width must be > 0')
+        self.__width = data
+
+    @property
+    def height(self) -> int:
+        """ retrieves height attribute for validation """
+        return self.__height
+
+    @height.setter
+    def height(self, data):
+        """ validates and set values for height attribute """
+        if type(data) != int:
+            raise TypeError('height must be an integer')
+        if data <= 0:
+            raise ValueError('height must be > 0')
+        self.__height = data
+
+    
