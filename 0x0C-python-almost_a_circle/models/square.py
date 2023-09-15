@@ -28,7 +28,7 @@ class Square(Rectangle):
         .format(self.id, self.x, self.y, self.width)
 
     def update(self, *args, **kwargs):
-        """ Assingns attributes """
+        """ Assigns instance attributes """
 
         len_arg = len(args)
         if args:
