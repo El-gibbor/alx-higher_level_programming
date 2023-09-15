@@ -18,8 +18,8 @@ class Square(Rectangle):
 
     @size.setter
     def size(self, data):
-        """ validates value with the superclass logic """
 
+        """ validates value with the superclass logic """
         self.height = data
         self.width = data
 
