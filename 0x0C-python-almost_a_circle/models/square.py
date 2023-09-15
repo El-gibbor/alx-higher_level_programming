@@ -25,7 +25,7 @@ class Square(Rectangle):
     def __str__(self):
         """ returning the class attributes in the below format """
         return "[Square] ({}) {}/{} - {}"\
-        .format(self.id, self.x, self.y, self.width)
+            .format(self.id, self.x, self.y, self.width)
 
     def update(self, *args, **kwargs):
         """ Assigns instance attributes """
