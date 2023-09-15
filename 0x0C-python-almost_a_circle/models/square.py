@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """ module holding a Derived class of Rectangle """
-from rectangle import Rectangle
+from models.rectangle import Rectangle
 
 
 class Square(Rectangle):

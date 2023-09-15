@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """This module contains a base class for all models"""
-
+from json import dumps
 
 class Base:
     """ Defines a base class for all models """
@@ -17,3 +17,12 @@ class Base:
             self.id = Base.__nb_objects
         else:
             self.id = id
+
+    @staticmethod
+    def to_json_string(list_dictionaries):
+        """returns the JSON string representation of list_dictionaries"""
+        
+        if not list_dictionaries or list_dictionaries is None:
+            return '[]'
+        else:
+            return dumps(list_dictionaries)
