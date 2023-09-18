@@ -3,6 +3,7 @@
 from models.base import Base
 from unittest import TestCase
 
+
 class Test_base(TestCase):
     """ Tests for the automatic assigning of Ids to all base instance."""
 
@@ -20,7 +21,6 @@ class Test_base(TestCase):
 
     def test_non_integer_id(self):
         """ Test when a non-integer ID is provided."""
-
         with self.subTest():
             base_obj = Base("str")
             self.assertEqual(base_obj.id, "str")
