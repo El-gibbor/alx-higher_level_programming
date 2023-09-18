@@ -42,3 +42,5 @@ class Test_base(TestCase):
         self.assertEqual(base_obj.from_json_string(None), [])
         self.assertEqual(base_obj.from_json_string('[]'), [])
         self.assertEqual(base_obj.from_json_string('[{"id": 2}]'), [{"id": 2}])
+        with self.assertRaises(TypeError):
+            Base.from_json_string(99)
