@@ -16,3 +16,13 @@ class Test_rectangle(TestCase):
         self.assertEqual(rect_obj.id, 1)
         self.assertEqual(rect_obj_1.id, 2)
         self.assertEqual(r3.id, 12)
+
+    def test_rectangle_attr(self):
+        """ tests all rectangle instance attributes """
+        with self.subTest():
+            rect_obj = Rectangle(10, 11, 12, 13, 14)
+            self.assertEqual(rect_obj.x, 12)
+            self.assertEqual(rect_obj.y, 13)
+            self.assertEqual(rect_obj.width, 10)
+            self.assertEqual(rect_obj.height, 11)
+
