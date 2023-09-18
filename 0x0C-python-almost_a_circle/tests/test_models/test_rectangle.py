@@ -26,3 +26,13 @@ class Test_rectangle(TestCase):
             self.assertEqual(rect_obj.width, 10)
             self.assertEqual(rect_obj.height, 11)
 
+    # def test_attr_values(self):
+    #     """proper validation of attr values & Exception raises"""
+    #     with self.assertRaises(TypeError):
+    #         Rectangle_obj = Rectangle("str", 10)
+    #     # with self.assertRaises(TypeError):
+    #     #     rect_obj = Rectangle(10, "str")
+    #     # with self.assertRaises(TypeError):
+    #     #     rect_obj = Rectangle(10, 20, "str")
+    #     # with self.assertRaises(TypeError):
+    #     #     rect_obj = Rectangle(10, 20, 30, "str")
