@@ -36,4 +36,9 @@ class Test_base(TestCase):
         self.assertEqual(base_obj.to_json_string([]), '[]')
         self.assertEqual(base_obj.to_json_string([{"id": 2}]), '[{"id": 2}]')
 
-
+    def test_from_json_str(self):
+        """tests for correct expected behaviuor of this method()"""
+        base_obj = Base()
+        self.assertEqual(base_obj.from_json_string(None), [])
+        self.assertEqual(base_obj.from_json_string('[]'), [])
+        self.assertEqual(base_obj.from_json_string('[{"id": 2}]'), [{"id": 2}])
