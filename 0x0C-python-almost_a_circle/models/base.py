@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """This module contains a base class for all models"""
-from json import dumps, dump
+from json import dumps, dump, loads
 
 
 class Base:
@@ -42,5 +42,7 @@ class Base:
     @staticmethod
     def from_json_string(json_string):
         """ returns the list of the JSON string representation (json_string) """
-# b = Base()
-# print(b.to_json_string([ {"age": 55}]))
+        if not json_string or json_string is None:
+            return '[]'
+        else:
+            return loads(json_string)
