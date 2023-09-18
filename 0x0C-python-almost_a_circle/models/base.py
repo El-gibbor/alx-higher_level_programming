@@ -42,8 +42,9 @@ class Base:
     @staticmethod
     def from_json_string(json_string):
         """returns the list of the JSON string representation (json_string)"""
-        # json_to_dict = []
+        json_to_dict = []
         if json_string or json_string is not None:
             if not isinstance(json_string, str):
                 raise TypeError('json_string must be a string')
-            return list(loads(json_string))
+            json_to_dict = loads(json_string)
+        return json_to_dict
