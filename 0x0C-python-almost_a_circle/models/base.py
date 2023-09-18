@@ -38,3 +38,7 @@ class Base:
             else:
                 serialised = [objs.to_dictionary() for objs in list_objs]
                 j_file.write(cls.to_json_string(serialised))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """ returns the list of the JSON string representation (json_string) """

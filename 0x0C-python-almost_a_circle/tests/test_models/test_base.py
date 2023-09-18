@@ -27,5 +27,5 @@ class Test_base(TestCase):
     def test_base_id(self):
         """ Correct Id assignment of all base instance """
         self.assertEqual(self.base_obj.id, 1)
-        self.assertEqual(self.base_obj.id, 2)
-        self.assertEqual(self.base_obj.id, 99)
+        self.assertEqual(self.base_obj_1.id, 2)
+        self.assertEqual(self.base_obj_2.id, 99)
