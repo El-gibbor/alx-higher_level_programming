@@ -4,5 +4,7 @@
 
 def read_file(filename=''):
     """ reads a file content """
+
     with open(filename) as file_content:
-        print(file_content.read())
+        to_stdout = file_content.read()
+        print(to_stdout)
