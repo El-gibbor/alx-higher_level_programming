@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """This module contains a base class for all models"""
 from json import dumps, dump, loads
+import os
 
 
 class Base:
@@ -58,3 +59,14 @@ class Base:
             dummy_obj = cls(2, 3)
         dummy_obj.update(**dictionary)
         return dummy_obj
+
+    @classmethod
+    def load_from_file(cls):
+        """ returns and recreate a list of instances from file """
+        if os.path.exists(cls.__name__ + '.json'):
+            with open(cls.__name__ + '.json') as from_file:
+                file_content = from_file.read()
+                deserialised = cls.from_json_string(file_content)
+        else:
+            return []
+        return [cls.create(**obj) for obj in deserialised]
