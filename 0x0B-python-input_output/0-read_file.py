@@ -1,10 +1,12 @@
 #!/usr/bin/python3
-""" a module with a function that reads a text file """
+""" A script containing a function that reads a file"""
 
 
-def read_file(filename=''):
-    """ reads a file content """
-
-    with open(filename, 'r') as file_content:
-        to_stdout = file_content.read()
-        print(to_stdout)
+def read_file(filename=""):
+    """ a function that reads a text file (UTF8) and prints it to stdout:
+    Args:
+        filename(str): file path
+    """
+    with open(filename) as read_file:
+        content = read_file.read()
+        print(content, end="")
