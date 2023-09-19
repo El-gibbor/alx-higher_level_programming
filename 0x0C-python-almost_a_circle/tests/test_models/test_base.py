@@ -5,7 +5,7 @@ from unittest import TestCase
 
 
 class Test_base(TestCase):
-    """ Tests for the automatic assigning of Ids to all base instance."""
+
 
     def test_auto_increment_id(self):
         """Test that IDs are assigned automatically and increases."""
