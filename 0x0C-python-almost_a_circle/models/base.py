@@ -48,3 +48,10 @@ class Base:
                 raise TypeError('json_string must be a string')
             json_to_dict = loads(json_string)
         return json_to_dict
+
+    @classmethod
+    def create(cls, **dictionary):
+        """returns an instance with all attributes already set"""
+        dummy_inst = cls(2, 3)
+        dummy_inst.update(**dictionary)
+        return dummy_inst
