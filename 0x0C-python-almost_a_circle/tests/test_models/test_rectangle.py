@@ -8,7 +8,7 @@ from models.rectangle import Rectangle
 
 
 class TestRectangle(TestCase):
-    """Tests the functionality of the derived class of the Base class, Rectangle."""
+    """Tests the functionality of the derived Base class, Rectangle."""
 
     def test_rectangle_w_h(self):
         """Test case for initializing width and height attributes."""
@@ -94,3 +94,74 @@ class TestRectangle(TestCase):
             with patch('sys.stdout', new=StringIO()) as to_stdout:
                 r1_obj.display()
                 self.assertEqual(to_stdout.getvalue(), '  ##\n  ##\n')
+
+    def test_to_dictionary(self):
+        """tests for the existence of this class method()"""
+        r1_obj = Rectangle(2, 2)
+        self.assertTrue(hasattr(r1_obj, 'to_dictionary'))
+        self.assertTrue(callable(r1_obj.to_dictionary))
+
+    def test_update(self):
+        """tests for the existence of update method()"""
+        r1_obj = Rectangle(2, 2)
+        self.assertTrue(hasattr(r1_obj, 'update'))
+        self.assertTrue(callable(r1_obj.update))
+
+    def test_update_args(self):
+        """ tests for correct update of attr values based on the passed args"""
+        with self.subTest():
+            r1_obj = Rectangle(2, 2)
+            r1_obj.update(90)
+            self.assertEqual(r1_obj.id, 90)
+
+        with self.subTest():
+            """tests for correct assigning of width argument"""
+            r1_obj.update(90, 99)
+            self.assertEqual(r1_obj.width, 99)
+
+        with self.subTest():
+            """tests for correct assigning of height argument"""
+            r1_obj.update(90, 33, 99)
+            self.assertEqual(r1_obj.height, 99)
+
+        with self.subTest():
+            """tests for correct assigning of x argument"""
+            r1_obj.update(90, 33, 99, 44)
+            self.assertEqual(r1_obj.x, 44)
+
+        with self.subTest():
+            """tests for correct attr assinging (argument for y)"""
+            r1_obj.update(90, 33, 99, 44, 55)
+            self.assertEqual(r1_obj.y, 55)
+
+    def update_kwargs(self):
+        """tests update() method with key-word arguments (id obj attr)"""
+        with self.subTest():
+            r1_obj = Rectangle(2, 2)
+            r1_obj.update({'id': 99})
+            self.assertEqual(r1_obj.id, 99)
+
+        with self.subTest():
+            """tests update() method with key-word arguments (width obj attr)"""
+            r1_obj = Rectangle(2, 2)
+            r1_obj.update({'id': 99, 'width': 2})
+            self.assertEqual(r1_obj.width, 2)
+
+        with self.subTest():
+            """tests update() method with key-word arguments (height obj attr)"""
+            r1_obj = Rectangle(2, 2)
+            r1_obj.update({'id': 99, 'width': 2, 'height': 6})
+            self.assertEqual(r1_obj.height, 6)
+
+        with self.subTest():
+            """tests update() method with key-word arguments (x obj attr)"""
+            r1_obj = Rectangle(2, 2)
+            r1_obj.update({'id': 99, 'width': 2, 'height': 6, 'x': 22})
+            self.assertEqual(r1_obj.x, 22)
+
+        with self.subTest():
+            """tests update() method with key-word arguments (y obj attr)"""
+            r1_obj = Rectangle(2, 2)
+            r1_obj.update({'id': 99, 'width': 2, 'height': 6, 'x': 22, 'y': 4})
+            self.assertEqual(r1_obj.x, 4)
+
