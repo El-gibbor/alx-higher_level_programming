@@ -52,6 +52,3 @@ class TestBase_id(TestCase):
             r1_obj = Rectangle.create(**{'id': 10})
             self.assertIsInstance(r1_obj, Rectangle)
             self.assertEqual(r1_obj.id, 10)
-
-        with self.subTest():
-            
