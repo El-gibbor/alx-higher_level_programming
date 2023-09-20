@@ -164,3 +164,7 @@ class TestRectangle(TestCase):
             r1_obj = Rectangle(2, 2)
             r1_obj.update({'id': 99, 'width': 2, 'height': 6, 'x': 22, 'y': 4})
             self.assertEqual(r1_obj.y, 4)
+
+    # def test_save_to_file(self):
+    #     """tests the functionality of save_to_file()"""
+    #     self.assertEqual(Rectangle.save_to_file([]), [])
