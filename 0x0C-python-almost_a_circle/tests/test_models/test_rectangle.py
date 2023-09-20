@@ -163,5 +163,5 @@ class TestRectangle(TestCase):
             """tests update() method with key-word arguments (y obj attr)"""
             r1_obj = Rectangle(2, 2)
             r1_obj.update({'id': 99, 'width': 2, 'height': 6, 'x': 22, 'y': 4})
-            self.assertEqual(r1_obj.x, 4)
+            self.assertEqual(r1_obj.y, 4)
 

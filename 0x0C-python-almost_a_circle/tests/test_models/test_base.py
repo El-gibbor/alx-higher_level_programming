@@ -2,12 +2,11 @@
 """a Test suit module for the base class"""
 from models.base import Base
 from unittest import TestCase
+from models.rectangle import Rectangle
 
-class TestBase(TestCase):
 
-    def setUp(self):
-        """Set up for each test case in this class."""
-        Base.__nb_objects = 0  # Reset the ID count before each test
+class TestBase_id(TestCase):
+    """ Testing for the expected behaviour of base id attr"""
 
     def test_auto_increment_id(self):
         """Test that IDs are assigned automatically and increase."""
@@ -46,3 +45,13 @@ class TestBase(TestCase):
         self.assertEqual(base_obj.from_json_string('[{"id": 2}]'), [{"id": 2}])
         with self.assertRaises(TypeError):
             Base.from_json_string(99)
+
+    def test_create(self):
+        """Testing for the correct functionality of create() method"""
+        with self.subTest():
+            r1_obj = Rectangle.create(**{'id': 10})
+            self.assertIsInstance(r1_obj, Rectangle)
+            self.assertEqual(r1_obj.id, 10)
+
+        with self.subTest():
+            
