@@ -1,10 +1,13 @@
 #!/usr/bin/python3
 """Test suite for the Rectangle class."""
-
-import unittest
+import sys
+from io import StringIO
+from unittest import TestCase
+from unittest.mock import patch
 from models.rectangle import Rectangle
 
-class TestRectangle(unittest.TestCase):
+
+class TestRectangle(TestCase):
     """Tests the functionality of the derived class of the Base class, Rectangle."""
 
     def test_rectangle_w_h(self):
@@ -61,5 +64,33 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(r1_obj.id, 8)
 
     def test_area_method(self):
+        """tests for the existence of this method() in the class"""
         r1_obj = Rectangle(2, 1)
         self.assertTrue(hasattr(r1_obj, 'area'))
+        self.assertTrue(callable(r1_obj.area))
+
+    def test_str_method(self):
+        """test for the existence of __str__()"""
+        r1_obj = Rectangle(2, 1)
+        self.assertTrue(hasattr(r1_obj, '__str__'))
+
+    def test_display(self):
+        """tests the existence of this method() in the class instance"""
+        r1_obj = Rectangle(2, 2)
+        self.assertTrue(r1_obj.display, True)
+        self.assertTrue(callable(r1_obj.display))
+
+    def test_display_stdout(self):
+        """ tests for correct character display to stdout (without x & y)"""
+        with self.subTest():
+            r1_obj = Rectangle(2, 2)
+            with patch('sys.stdout', new=StringIO()) as to_stdout:
+                r1_obj.display()
+                self.assertEqual(to_stdout.getvalue(), '##\n##\n')
+
+        with self.subTest():
+            """ tests for correct character display to stdout (without y)"""
+            r1_obj = Rectangle(2, 2, 2)
+            with patch('sys.stdout', new=StringIO()) as to_stdout:
+                r1_obj.display()
+                self.assertEqual(to_stdout.getvalue(), '  ##\n  ##\n')
