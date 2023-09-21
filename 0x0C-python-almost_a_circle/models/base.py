@@ -74,4 +74,3 @@ class Base:
     @classmethod
     def save_to_file_csv(cls, list_objs):
         """ Sertializes in CSV (comma seperated value - e.g Excel)"""
-        
