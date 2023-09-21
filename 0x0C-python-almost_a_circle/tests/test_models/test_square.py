@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 """Test suit for the square class"""
 import os
-from models.square import Square
 from io import StringIO
 from unittest import TestCase
 from unittest.mock import patch
+from models.square import Square
 
 class TestSquare(TestCase):
     """ Testing the Square class and its methods"""
@@ -45,6 +45,11 @@ class TestSquare(TestCase):
             with open("Square.json", "r") as file:
                 self.assertEqual(file.read(), '[{"id": 33, "size": 1, "x": 0, "y": 0}]')
 
+        with self.subTest():
+            Square.save_to_file([])
+            with open("Square.json", "r") as file:
+                self.assertEqual(file.read(), '[]')
+
     def test_load_from_file(self):
         """Test loading from a non-existent file"""
         try:
@@ -64,7 +69,7 @@ class TestSquare(TestCase):
         r1 = Square(5, 0, 0, 3)
         Square.save_to_file([r1])
         instances = Square.load_from_file()
-        
+
         # Assert that the loaded instance matches the original instance
         self.assertEqual(len(instances), 1)
         self.assertEqual(instances[0].id, r1.id)

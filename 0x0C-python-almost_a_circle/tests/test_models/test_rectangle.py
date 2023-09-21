@@ -65,13 +65,16 @@ class TestRectangle(TestCase):
 
     def test_area_method(self):
         """tests for the existence of this method() in the class"""
-        r1_obj = Rectangle(2, 1)
+        r1_obj = Rectangle(2, 3)
+        self.assertEqual(r1_obj.area(), 6)
         self.assertTrue(r1_obj.area, True)
         self.assertTrue(callable(r1_obj.area))
 
     def test_str_method(self):
         """test for the existence of __str__()"""
         r1_obj = Rectangle(2, 1)
+        self.assertEqual(r1_obj.__str__(), '[Rectangle] (14) 0/0 - 2/1')
+        self.assertTrue(callable(r1_obj.__str__))
         self.assertTrue(hasattr(r1_obj, '__str__'))
 
     def test_display(self):
