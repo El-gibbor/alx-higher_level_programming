@@ -111,6 +111,7 @@ class TestRectangle(TestCase):
         self.assertTrue(hasattr(r1_obj, 'update'))
         self.assertTrue(callable(r1_obj.update))
 
+
     def test_update_args(self):
         """ tests for correct update of attr values based on the passed args"""
         with self.subTest():
