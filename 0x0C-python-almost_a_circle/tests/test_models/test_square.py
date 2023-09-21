@@ -106,30 +106,30 @@ class TestSquare(TestCase):
         """tests update() method with key-word arguments (id obj attr)"""
         with self.subTest():
             r1_obj = Square(2)
-            r1_obj.update({'id': 99})
+            r1_obj.update(**{'id': 99})
             self.assertEqual(r1_obj.id, 99)
 
         with self.subTest():
             """tests update() method with key-word arguments (width obj attr)"""
             r1_obj = Square(2)
-            r1_obj.update({'id': 99, 'width': 2})
+            r1_obj.update(**{'id': 99, 'width': 2})
             self.assertEqual(r1_obj.width, 2)
 
         with self.subTest():
             """tests update() method with key-word arguments (height obj attr)"""
             r1_obj = Square(2)
-            r1_obj.update({'id': 99, 'width': 2, 'height': 6})
+            r1_obj.update(**{'id': 99, 'width': 2, 'height': 6})
             self.assertEqual(r1_obj.height, 6)
 
         with self.subTest():
             """tests update() method with key-word arguments (x obj attr)"""
             r1_obj = Square(2)
-            r1_obj.update({'id': 99, 'width': 2, 'height': 6, 'x': 22})
+            r1_obj.update(**{'id': 99, 'width': 2, 'height': 6, 'x': 22})
             self.assertEqual(r1_obj.x, 22)
 
         with self.subTest():
             """tests update() method with key-word arguments (y obj attr)"""
             r1_obj = Square(2)
-            r1_obj.update({'id': 99, 'width': 2, 'height': 6, 'x': 22, 'y': 4})
+            r1_obj.update(**{'id': 99, 'width': 2, 'height': 6, 'x': 22, 'y': 4})
             self.assertEqual(r1_obj.y, 4)
 
