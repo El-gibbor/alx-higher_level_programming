@@ -81,6 +81,7 @@ class TestRectangle(TestCase):
         """tests the existence of this method() in the class instance"""
         r1_obj = Rectangle(2, 2)
         self.assertTrue(r1_obj.display, True)
+        self.assertTrue(r1_obj.display(), None)
         self.assertTrue(callable(r1_obj.display))
 
     def test_display_stdout(self):
