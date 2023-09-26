@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """ Student to disk and reload """
-from json import loads
 
 class Student:
     """a class Student that defines a student by: (based on 9-student.py"""
@@ -29,4 +28,4 @@ class Student:
     def reload_from_json(self, json):
         """replaces all attr of the Student instance (bk to cls obj)"""
         for keys, val in json.items():
-            setattr(self, keys, val)
+            self.__dict__[keys] = val
