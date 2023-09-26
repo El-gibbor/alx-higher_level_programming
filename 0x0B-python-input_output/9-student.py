@@ -14,6 +14,6 @@ class Student:
     def to_json(self):
         """retrieves a dictionary representation of a Student instance.
         vars() method returns the __dict__ (dictionary mapping) attribute of
-        the given object.
+        the given object, same as self.__dict__
         """
         return vars(self)
