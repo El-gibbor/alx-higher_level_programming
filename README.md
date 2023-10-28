@@ -11,7 +11,6 @@ Python, known for its simplicity and readability, is a versatile language used f
 SQL is essential for managing and querying databases. With the task exercises in this repo, we master the art of database design, data manipulation, and optimization techniques to work effectively with relational databases.  
 - **Database Design:** Understand the concepts of tables, relationships, and normalization to create efficient database structures.  
 - **Data Manipulation:** Learn SQL queries for data retrieval, insertion, updating, and deletion.  
-- **Data Modeling:** Explore advanced topics such as ER diagrams and database normalization for complex data models.  
 - **Performance Optimization:** Optimize SQL queries for improved database performance and responsiveness.
 ## 3. JavaScript Development:
 JavaScript is the language of the web, allowing you to create interactive and dynamic user interfaces. Here we explore client-side and server-side development, frameworks, and libraries to enhance our JavaScript skills.  
