@@ -4,7 +4,7 @@ In this repository, we explore the realms of high-level programming languages, f
 ## What We'll Learn/Lerarning 🎓
 ### 1. Python Programming: 
 Python, known for its simplicity and readability, is a versatile language used for web development, data analysis, artificial intelligence, and automation. Here we will Explore fundamental concepts, advanced techniques, and best practices to become proficient in Python.   
-- **Basic Syntax:** Understand the fundamental building blocks of Python, including variables, data types, and control structures.  
+- **Basic Syntax:** Fundamental building blocks of Python, including variables, data types, and control structures.  
 - **Object-Oriented Programming (OOP):** Learn the principles of OOP, encapsulation, inheritance, and polymorphism.  
 - **Web Development:** Explore web frameworks like Flask to create dynamic and responsive web applications.
 ### 2. SQL (Structured Query Language): 🛢
