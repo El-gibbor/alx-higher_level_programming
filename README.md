@@ -15,7 +15,7 @@ SQL is essential for managing and querying databases. With the task exercises in
 - **Performance Optimization:** Optimize SQL queries for improved database performance and responsiveness.
 ## 3. JavaScript Development:
 JavaScript is the language of the web, allowing you to create interactive and dynamic user interfaces. Here we explore client-side and server-side development, frameworks, and libraries to enhance our JavaScript skills.  
-- **Front-End Development:** Master HTML, CSS, and JavaScript to create responsive and visually appealing web pages.  
+- **Front-End Development:** Create responsive and visually appealing web pages with HTML, CSS, and JavaScript.  
 - **DOM Manipulation:** Learn how to manipulate the Document Object Model (DOM) to create interactive web elements.  
 - **Asynchronous Programming:** Understand asynchronous JavaScript, including promises and async/await, for efficient handling of asynchronous tasks.  
 - **Back-End Development:** Explore Node.js and server-side JavaScript frameworks like Express for building scalable and performant web applications.
