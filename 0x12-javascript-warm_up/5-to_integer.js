@@ -2,5 +2,5 @@
 const { argv } = require('process');
 
 const toInt = Math.floor(argv[2]);
-const msg = isNaN(toInt) ? 'Not a number' : toInt;
-console.log(msg);
+isNaN(toInt) ? console.log('Not a number') : console.log(`My number is: ${argv[2]}`);
+
