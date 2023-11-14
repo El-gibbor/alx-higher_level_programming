@@ -1,7 +1,7 @@
 #!/usr/bin/node
 const { argv } = require('process');
 
-const allArgs = argv.slice(2).map(Number); // new array with elements casted to int
+const allArgs = argv.slice(2).map(Number); // new array with its elements casted to int
 if (allArgs.length <= 1) {
     console.log(0);
 } else {
