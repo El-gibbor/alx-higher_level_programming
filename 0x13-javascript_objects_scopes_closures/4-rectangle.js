@@ -13,7 +13,7 @@ class Rectangle {
   }
 
   rotate () {
-    [this.width, this.height] = [this.height, this.width]; // distructuring assignment
+    [this.width, this.height] = [this.height, this.width]; // distructuring assignment (swapped)
   }
 
   double () {
