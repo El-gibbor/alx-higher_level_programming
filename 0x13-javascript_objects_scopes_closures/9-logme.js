@@ -2,6 +2,6 @@
 
 let logCount = 0;
 exports.logMe = function (item) {
-    console.log(`${logCount}: ${item}`);
-    logCount++;
+  console.log(`${logCount}: ${item}`);
+  logCount++;
 };
