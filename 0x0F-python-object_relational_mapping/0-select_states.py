@@ -9,12 +9,9 @@ if __name__ == "__main__":
     host, port = "localhost", 3306
     user_name, password, db_name = argv[1], argv[2], argv[3]
 
-    db_connect = MySQLdb.connect(host, user_name, password, db_name, port)
-    cur = db_connect.cursor()
-
-    cur.execute("SELECT * FROM states ORDER BY states.id ASC")
-    table_rows = cur.fetchall()
-    for state in table_rows:
-        print(state)
-    cur.close()
-    db_connect.close()
+    with MySQLdb.connect(host, user_name, password, db_name, port) as db:
+        with db.cursor() as cur:
+            cur.execute("SELECT * FROM states ORDER BY states.id ASC")
+            table_rows = cur.fetchall()
+            for state in table_rows:
+                print(state)
