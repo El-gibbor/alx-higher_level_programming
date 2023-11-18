@@ -8,10 +8,10 @@ if __name__ == "__main__":
     import MySQLdb
     from sys import argv
 
-    host, port = "localhost", 3306
-    user_name, passwd, db_name = argv[1], argv[2], argv[3]
+    h, p = "localhost", 3306
+    u, psw, db_name = argv[1], argv[2], argv[3]
 
-    with MySQLdb.connect(host, user_name, passwd, db_name, port) as db:
+    with MySQLdb.connect(host=h, user=u, passwd=psw, db=db_name, port=p) as db:
         with db.cursor() as cursor_obj:
             query = "SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC"
             cursor_obj.execute(query)
