@@ -17,3 +17,8 @@ if __name__ == "__main__":
             city_names = cursor_obj.fetchall()
             names = [name[0] for name in city_names]
             print(', '.join(names))
+
+    """ NB:
+    fetchall() method fetches all the rows of the result set as a list of tuples.
+    In this script, the data at index 0 of each tuple (city names) is what i extracted and printed.
+    """
