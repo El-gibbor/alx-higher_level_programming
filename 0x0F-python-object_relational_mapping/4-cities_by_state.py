@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-""" Executes an SQL query to retrieve data from the 'cities' and 'states'
-    tables, joining them on the 'state_id' and ordering by 'cities.id'.
+""" connects and executes an SQL query to retrieve data from the 'cities'
+and 'states' tables, joining them on the 'state_id' and ordering by 'cities.id'.
 """
 
 if __name__ == "__main__":
