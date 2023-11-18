@@ -15,8 +15,7 @@ if __name__ == "__main__":
             (SELECT states.id WHERE states.name = %s ORDER BY cities.id ASC)"""
             cursor_obj.execute(sql, (name_arg,))
             city_names = cursor_obj.fetchall()
-            names = [name[0] for name in city_names]
-            print(', '.join(names))
+            print(', '.join([name[0] for name in city_names]))
 
     """ NB:
     fetchall() method fetches all the rows of the result set as a list of tuples.
