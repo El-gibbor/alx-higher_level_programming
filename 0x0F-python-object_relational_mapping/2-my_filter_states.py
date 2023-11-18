@@ -7,13 +7,13 @@ if __name__ == "__main__":
     import MySQLdb
     from sys import argv
 
-    host, port = "localhost", 3306,
-    user, passwd, db_name, state_name = argv[1], argv[2], argv[3], argv[4]
+    h, p = "localhost", 3306,
+    u, p, db_name, search = argv[1], argv[2], argv[3], argv[4]
 
-    with MySQLdb.connect(host, user, passwd, db_name, port) as db_conn:
-        with db_conn.cursor() as cursor_obj:
-            query = "SELECT * FROM states WHERE name = '{:s}'\
-            ORDER BY id ASC"
+    with MySQLdb.connect(host=h, user=u, passwd=p, db=db_name, port=p) as db:
+        with db.cursor() as cursor_obj:
+            query = """SELECT * FROM states
+            WHERE BINARY name = '{}' ORDER BY id ASC""".format(search)
             cursor_obj.execute(query)
             fetched_state = cursor_obj.fetchall()
             for state in fetched_state:
