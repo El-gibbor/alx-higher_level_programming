@@ -1,17 +1,18 @@
 #!/usr/bin/python3
 """ Using sqlachemy(orm), Connects to a MySQL database and retrieves
-information(state id and names) from the 'states' table.
-"""
-from sys import argv
-from model_state import Base, State
-from sqlalchemy import create_engine
-from sqlalchemy.orm import Session
+information(state id and names) from the 'states' table. """
 
-db_url = f"mysql+mysqldb://{argv[1]}:{argv[2]}@localhost/{argv[3]}"
+if __name__ == "__main__":
+    from sys import argv
+    from model_state import Base, State
+    from sqlalchemy import create_engine
+    from sqlalchemy.orm import Session
 
-engine = create_engine(db_url)
-Base.metadata.create_all(engine)
+    db_url = f"mysql+mysqldb://{argv[1]}:{argv[2]}@localhost/{argv[3]}"
 
-with Session(engine) as session:
-    for state in session.query(State).order_by(State.id).all():
-        print(f"{state.id}: {state.name}")
+    engine = create_engine(db_url, pool_pre_ping=True)
+    Base.metadata.create_all(engine)
+
+    with Session(engine) as session:
+        for state in session.query(State).order_by(State.id).all():
+            print(f"{state.id}: {state.name}")
