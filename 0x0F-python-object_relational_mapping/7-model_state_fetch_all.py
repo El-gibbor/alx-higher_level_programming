@@ -1,12 +1,13 @@
 #!/usr/bin/python3
 """ Using sqlachemy(orm), Connects to a MySQL database and retrieves
-information(state id and names) from the 'states' table. """
-
-if __name__ == "__main__":
+information(state id and names) from the 'states' table.
+"""
+if __name__ == "__name__":
     from sys import argv
+    from sqlalchemy.orm import Session
     from model_state import Base, State
     from sqlalchemy import create_engine
-    from sqlalchemy.orm import Session
+
 
     db_url = f"mysql+mysqldb://{argv[1]}:{argv[2]}@localhost/{argv[3]}"
 
