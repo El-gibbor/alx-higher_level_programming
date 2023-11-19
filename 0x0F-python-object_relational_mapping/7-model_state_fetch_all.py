@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """ Using sqlachemy(orm), Connects to a MySQL database and retrieves
-information(state id and names) from the 'states' table.
-"""
+information(state id and names) from the 'states' table. """
+
 if __name__ == "__main__":
     from sys import argv
     from sqlalchemy.orm import Session
