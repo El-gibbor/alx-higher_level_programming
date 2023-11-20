@@ -11,7 +11,7 @@ if __name__ == "__main__":
 
     conn_url = f"mysql+mysqldb://{argv[1]}:{argv[2]}@localhost/{argv[3]}"
 
-    engine =  create_engine(conn_url)
+    engine = create_engine(conn_url)
     Base.metadata.create_all(engine)
 
     with Session(engine) as session:
