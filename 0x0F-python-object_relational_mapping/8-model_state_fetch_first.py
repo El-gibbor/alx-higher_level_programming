@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-""" Connects to a MySQL database using SQLAlchemy, retrieves the first entry from the 'states' table,
-and prints its ID and name. If the table is empty, it prints "Nothing. """
+""" Using SQLAlchemy, Connects to db and retrieves the first entry from the
+'states' table, prints its ID and name. prints "Nothing" If the table is empty
+"""
 
 if __name__ == "__main__":
     from sys import argv
