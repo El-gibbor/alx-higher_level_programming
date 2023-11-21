@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" This a python class definition of a city table in the database """
+""" This is a python class definition of a city table in the database """
 
 from model_state import Base, State
 from sqlalchemy import Integer, String, Column, ForeignKey
