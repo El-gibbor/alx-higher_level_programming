@@ -13,8 +13,7 @@ engine = create_engine(conn_url)
 Base.metadata.create_all(engine)
 
 with Session(engine) as session:
-    all_states = session.query(State).all()
-    for state in all_states:
-        if 'a' in state.name:
-            session.delete(state)
+    states_with_a = session.query(State).filter(State.name.like("%a%"))
+    for state in states_with_a:
+        session.delete(state)
     session.commit()
