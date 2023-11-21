@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """ Retrieves a state with ID 2 from the 'states' table id the db and
-updates the name of the retrieved state to "New Mexico". """
+updates the name of the retrieved state to "New Mexico. """
 
 if __name__ == "__main__":
     from sys import argv

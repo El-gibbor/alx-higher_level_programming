@@ -15,4 +15,5 @@ if __name__ == "__main__":
 
     with Session(engine) as session:
         for state in session.query(State).order_by(State.id).all():
-            print(f"{state.id}: {state.name}")
+            if 'Y' in state.name:
+                print(f"{state.id}: {state.name}")
