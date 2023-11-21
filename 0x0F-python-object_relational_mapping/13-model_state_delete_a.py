@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" connects to a MySQL db and removes rows from the 'State' table
+""" connects to a MySQL db and remove rows from the 'State' table
 where the letter 'a' is present in the 'name' column."""
 
 if __name__ == "__main__":
