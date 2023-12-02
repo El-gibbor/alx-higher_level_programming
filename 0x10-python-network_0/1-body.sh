@@ -1,3 +1,3 @@
 #!/bin/bash
-# A script that takes in a URL, sends a GET request to the URL, and displays the body of the response
-curl "$1" -sL
+# curl a URL and displays the body of the response for 200 status code
+if [ "$(curl -sL "$1" -w '%{http_code}\n')" == "200" ]; then curl -sL "$1"; fi
