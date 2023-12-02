@@ -1,3 +1,3 @@
 #!/bin/bash
-# curl a URL and display the size of the response in bytes
-curl -so /dev/null -w '%{size_download}\n' "$1"
+# displays the body size of the response from a URL request
+curl -w '%{size_download}\n' -o /dev/null -s "$1"
