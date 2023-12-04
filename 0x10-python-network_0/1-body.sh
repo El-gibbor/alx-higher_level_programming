@@ -1,3 +1,3 @@
 #!/bin/bash
 # curl a URL and displays the body of the response for 200 status code
-if [ "$(curl -sL "$1" -w '%{http_code}\n')" == "200" ]; then curl -sL "$1"; fi
+curl -sL "$1"
