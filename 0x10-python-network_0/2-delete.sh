@@ -1,3 +1,3 @@
 #!/bin/bash
-# curl DELETE request to a URL passed as an arg and displays body
+# curl DELETE request to a URL passed as an arg and displays its body
 curl -X  DELETE "$" -s
