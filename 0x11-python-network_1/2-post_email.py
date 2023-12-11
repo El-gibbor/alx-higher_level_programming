@@ -1,8 +1,10 @@
 #!/usr/bin/python3
-"""sends a POST request to a URL with email as parameter"""
+"""sends a POST request to a URL with email as parameter
+"""
+
+
 from urllib import request, parse
 from sys import argv
-
 
 email = argv[2]
 arg_val = {'email': email}
