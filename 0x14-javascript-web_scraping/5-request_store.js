@@ -1,10 +1,10 @@
 #!/usr/bin/node
 // get and stores the content of a webpage in a file
 
-const uri = argv[2];
 const fs = require('fs');
 request = require('request');
 const { argv } = require('process');
+const uri = argv[2];
 
 request(uri, (err, response, body) => {
   if (err) {
