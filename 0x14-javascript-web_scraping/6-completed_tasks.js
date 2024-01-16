@@ -2,9 +2,9 @@
 // computes the number of tasks completed by user id.
 
 const r = require('request');
-const uri = 'https://jsonplaceholder.typicode.com/todos';
+const { argv } = require('process');
 
-r.get(uri, (err, res, body) => {
+r.get(argv[2], (err, res, body) => {
   if (err) {
     console.error(err);
   } else {
